@@ -7,8 +7,8 @@ let package = Package(
     name: "TypeEffectivenessKit",
     defaultLocalization: "en",
     platforms: [
-      .iOS(.v14),
-      .macOS(.v11),
+      .iOS(.v15),
+      .macOS(.v12),
       .watchOS(.v7),
       .tvOS(.v14)
     ],
