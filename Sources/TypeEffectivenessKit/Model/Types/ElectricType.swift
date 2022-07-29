@@ -16,41 +16,41 @@ enum ElectricType: TypeConformable {
         case .secondType(let type):
             switch type {
             case .normal:
-                return [.ghost]
+                return []
             case .fire:
-                return [.ghost]
+                return []
             case .water:
-                return [.ghost]
+                return []
             case .electric:
-                return [.ghost]
+                return []
             case .grass:
-                return [.ghost]
+                return []
             case .ice:
-                return [.ghost]
+                return []
             case .fighting:
-                return [.ghost]
+                return []
             case .poison:
-                return [.ghost]
+                return []
             case .ground:
-                return [.ghost, .electric]
+                return []
             case .flying:
-                return [.ghost, .ground]
+                return []
             case .psychic:
-                return [.ghost]
+                return []
             case .bug:
-                return [.ghost]
+                return []
             case .rock:
-                return [.ghost]
+                return []
             case .ghost:
-                return [.normal, .fighting, .ghost]
+                return []
             case .dragon:
-                return [.ghost]
+                return []
             case .dark:
-                return [.psychic, .ghost]
+                return []
             case .steel:
-                return [.ghost, .poison]
+                return []
             case .fairy:
-                return [.ghost, .dragon]
+                return []
             }
         }
     }
@@ -70,7 +70,7 @@ enum ElectricType: TypeConformable {
             case .grass:
                 return []
             case .ice:
-                return [.fighting]
+                return []
             case .fighting:
                 return []
             case .poison:
@@ -84,15 +84,15 @@ enum ElectricType: TypeConformable {
             case .bug:
                 return []
             case .rock:
-                return [.fighting]
+                return []
             case .ghost:
                 return []
             case .dragon:
                 return []
             case .dark:
-                return [.fighting]
+                return []
             case .steel:
-                return [.fighting]
+                return []
             case .fairy:
                 return []
             }
@@ -106,49 +106,129 @@ enum ElectricType: TypeConformable {
             case .normal:
                 return []
             case .fire:
-                return [.fire, .grass, .ice, .bug, .steel, .fairy]
+                return []
             case .water:
-                return [.fire, .water, .ice, .steel]
+                return []
             case .electric:
-                return [.electric, .flying]
+                return []
             case .grass:
-                return [.water, .electric, .grass, .ground]
+                return []
             case .ice:
-                return [.ice]
+                return []
             case .fighting:
-                return [.bug, .rock, .dark]
+                return []
             case .poison:
-                return [.grass, .poison, .bug, .fairy]
+                return []
             case .ground:
-                return [.poison, .rock]
+                return []
             case .flying:
-                return [.grass, .bug]
+                return []
             case .psychic:
-                return [.psychic]
+                return []
             case .bug:
-                return [.grass, .ground]
+                return []
             case .rock:
-                return [.normal, .fire, .poison, .flying]
+                return []
             case .ghost:
-                return [.poison, .bug]
+                return []
             case .dragon:
-                return [.fire, .water, .electric, .grass]
+                return []
             case .dark:
-                return [.dark]
+                return []
             case .steel:
-                return [.normal, .grass, .ice, .flying, .psychic, .bug, .rock, .dragon, .steel, .fairy]
+                return []
             case .fairy:
-                return [.bug, .dark]
+                return []
             }
         }
     }
     
     var normalDamageFrom: [PokemonType] {
-        return []
+        switch self {
+        case .secondType(let type):
+            switch type {
+            case .normal:
+                return []
+            case .fire:
+                return []
+            case .water:
+                return []
+            case .electric:
+                return []
+            case .grass:
+                return []
+            case .ice:
+                return []
+            case .fighting:
+                return []
+            case .poison:
+                return []
+            case .ground:
+                return []
+            case .flying:
+                return []
+            case .psychic:
+                return []
+            case .bug:
+                return []
+            case .rock:
+                return []
+            case .ghost:
+                return []
+            case .dragon:
+                return []
+            case .dark:
+                return []
+            case .steel:
+                return []
+            case .fairy:
+                return []
+            }
+        }
     }
     
     var doubleDamageFrom: [PokemonType] {
-        return []
+        switch self {
+        case .secondType(let type):
+            switch type {
+            case .normal:
+                return []
+            case .fire:
+                return []
+            case .water:
+                return []
+            case .electric:
+                return []
+            case .grass:
+                return []
+            case .ice:
+                return []
+            case .fighting:
+                return []
+            case .poison:
+                return []
+            case .ground:
+                return []
+            case .flying:
+                return []
+            case .psychic:
+                return []
+            case .bug:
+                return []
+            case .rock:
+                return []
+            case .ghost:
+                return []
+            case .dragon:
+                return []
+            case .dark:
+                return []
+            case .steel:
+                return []
+            case .fairy:
+                return []
+            }
+        }
     }
     
     var quadrupleDamageFrom: [PokemonType] {
@@ -166,7 +246,7 @@ enum ElectricType: TypeConformable {
             case .grass:
                 return []
             case .ice:
-                return [.fighting]
+                return []
             case .fighting:
                 return []
             case .poison:
@@ -180,15 +260,15 @@ enum ElectricType: TypeConformable {
             case .bug:
                 return []
             case .rock:
-                return [.fighting]
+                return []
             case .ghost:
                 return []
             case .dragon:
                 return []
             case .dark:
-                return [.fighting]
+                return []
             case .steel:
-                return [.fighting]
+                return []
             case .fairy:
                 return []
             }
