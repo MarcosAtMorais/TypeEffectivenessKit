@@ -1,5 +1,5 @@
 //
-//  NormalType.swift
+//  FireType.swift
 //  
 //
 //  Created by Marcos Morais on 28/07/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NormalType: TypeConformable {
+enum FireType: TypeConformable {
     
     case secondType(type: PokemonType)
     

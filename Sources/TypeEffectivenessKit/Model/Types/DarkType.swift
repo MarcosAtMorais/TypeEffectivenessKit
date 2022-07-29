@@ -1,13 +1,13 @@
 //
-//  NormalType.swift
+//  DarkType.swift
 //  
 //
-//  Created by Marcos Morais on 28/07/22.
+//  Created by Marcos Morais on 29/07/22.
 //
 
 import Foundation
 
-enum NormalType: TypeConformable {
+enum DarkType: TypeConformable {
     
     case secondType(type: PokemonType)
     

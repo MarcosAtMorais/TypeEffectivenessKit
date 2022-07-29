@@ -1,5 +1,5 @@
 //
-//  NormalType.swift
+//  PoisonType.swift
 //  
 //
 //  Created by Marcos Morais on 28/07/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NormalType: TypeConformable {
+enum PoisonType: TypeConformable {
     
     case secondType(type: PokemonType)
     

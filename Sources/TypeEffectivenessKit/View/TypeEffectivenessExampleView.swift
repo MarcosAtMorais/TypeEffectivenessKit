@@ -20,8 +20,8 @@ struct TypeEffectivenessExampleView: View {
     
     private func exampleCheck() -> Effectiveness {
         
-        let damageType = PokemonType.fighting
-        let pokemonType = NormalType.secondType(type: .ghost)
+        let damageType = PokemonType.ghost
+        let pokemonType = DualType.fetchPokemonType(firstType: .normal, secondType: .ghost)
         
         return pokemonType.checkDamage(type: damageType)
         
