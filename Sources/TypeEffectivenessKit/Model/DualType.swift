@@ -54,7 +54,7 @@ struct DualType {
     
     static public func fetchPokemonType(singleType: PokemonType) -> TypeConformable {
         
-        let secondType = firstType
+        let secondType = singleType
         
         switch singleType {
         case .normal:
