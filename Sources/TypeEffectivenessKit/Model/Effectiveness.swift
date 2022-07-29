@@ -14,6 +14,7 @@ enum Effectiveness: Int, RawRepresentable, CaseIterable {
     case notVeryEffective
     case effective
     case superEffective
+    // TODO: Mega Effective
     
     var localized: String {
         switch self {
