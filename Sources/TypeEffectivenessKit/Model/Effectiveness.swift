@@ -14,7 +14,7 @@ enum Effectiveness: Int, RawRepresentable, CaseIterable {
     case notVeryEffective
     case effective
     case superEffective
-    // TODO: Mega Effective
+    case ultraEffective
     
     var localized: String {
         switch self {
@@ -26,6 +26,8 @@ enum Effectiveness: Int, RawRepresentable, CaseIterable {
             return String(localized: "Not Very Effective")
         case .superEffective:
             return String(localized: "Super Effective")
+        case .ultraEffective:
+            return String(localized: "Ultra (4x) Effective")
         case .notLocated:
             return String(localized: "We could not process the type effectiveness")
         }

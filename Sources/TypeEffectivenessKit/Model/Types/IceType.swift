@@ -107,4 +107,48 @@ enum IceType: TypeConformable {
         return []
     }
     
+    var quadrupleDamageFrom: [PokemonType] {
+        switch self {
+        case .secondType(let type):
+            switch type {
+            case .normal:
+                return []
+            case .fire:
+                return []
+            case .water:
+                return []
+            case .electric:
+                return []
+            case .grass:
+                return []
+            case .ice:
+                return [.fighting]
+            case .fighting:
+                return []
+            case .poison:
+                return []
+            case .ground:
+                return []
+            case .flying:
+                return []
+            case .psychic:
+                return []
+            case .bug:
+                return []
+            case .rock:
+                return [.fighting]
+            case .ghost:
+                return []
+            case .dragon:
+                return []
+            case .dark:
+                return [.fighting]
+            case .steel:
+                return [.fighting]
+            case .fairy:
+                return []
+            }
+        }
+    }
+    
 }

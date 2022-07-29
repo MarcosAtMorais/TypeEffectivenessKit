@@ -13,6 +13,7 @@ protocol TypeConformable {
     var halfDamageFrom: [PokemonType] { get }
     var normalDamageFrom: [PokemonType] { get }
     var doubleDamageFrom: [PokemonType] { get }
+    var quadrupleDamageFrom: [PokemonType] { get }
     
     func checkDamage(type: PokemonType) -> Effectiveness
 
@@ -26,6 +27,7 @@ extension TypeConformable {
         if !halfDamageFrom.filter({ $0 == type }).isEmpty { return .notVeryEffective }
         if !normalDamageFrom.filter({ $0 == type }).isEmpty { return .effective }
         if !doubleDamageFrom.filter({ $0 == type }).isEmpty { return .superEffective }
+        if !quadrupleDamageFrom.filter({ $0 == type }).isEmpty { return .ultraEffective }
         
         return .notLocated
 
