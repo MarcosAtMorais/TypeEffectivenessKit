@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum PokemonType: Int, RawRepresentable, CaseIterable {
     
@@ -66,6 +67,47 @@ enum PokemonType: Int, RawRepresentable, CaseIterable {
             return String(localized: "Steel")
         case .water:
             return String(localized: "Water")
+        }
+    }
+    
+    var colorGradient: [Color] {
+        switch self {
+        case .normal:
+            return [.gray.opacity(0.75), .gray]
+        case .fire:
+            return [.red.opacity(0.5), .red]
+        case .water:
+            return [.blue.opacity(0.5), .blue]
+        case .electric:
+            return [.yellow.opacity(0.5), .yellow]
+        case .grass:
+            return [.green.opacity(0.5), .green]
+        case .ice:
+            return [.teal.opacity(0.5), .teal]
+        case .fighting:
+            return [.brown.opacity(0.5), .brown]
+        case .poison:
+            return [.purple.opacity(0.85), .purple]
+        case .ground:
+            return [.orange.opacity(0.5), .yellow]
+        case .flying:
+            return [.cyan.opacity(0.5), .cyan]
+        case .psychic:
+            return [.pink.opacity(0.5), .pink]
+        case .bug:
+            return [.green.opacity(0.25), .green.opacity(0.5)]
+        case .rock:
+            return [.yellow.opacity(0.5), .yellow.opacity(0.75)]
+        case .ghost:
+            return [.purple.opacity(0.85), .purple]
+        case .dragon:
+            return [.purple.opacity(0.5), .purple]
+        case .dark:
+            return [.brown.opacity(0.5), .brown]
+        case .steel:
+            return [.gray.opacity(0.5), .gray]
+        case .fairy:
+            return [.pink.opacity(0.25), .pink]
         }
     }
     

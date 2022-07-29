@@ -10,6 +10,7 @@ import Foundation
 protocol TypeConformable {
     
     var noDamageFrom: [PokemonType] { get }
+    var oneFourthDamageFrom: [PokemonType] { get }
     var halfDamageFrom: [PokemonType] { get }
     var normalDamageFrom: [PokemonType] { get }
     var doubleDamageFrom: [PokemonType] { get }
@@ -24,6 +25,7 @@ extension TypeConformable {
     func checkDamage(type: PokemonType) -> Effectiveness {
         
         if !noDamageFrom.filter({ $0 == type }).isEmpty { return .noEffect }
+        if !oneFourthDamageFrom.filter({ $0 == type }).isEmpty { return .barelyEffective }
         if !halfDamageFrom.filter({ $0 == type }).isEmpty { return .notVeryEffective }
         if !normalDamageFrom.filter({ $0 == type }).isEmpty { return .effective }
         if !doubleDamageFrom.filter({ $0 == type }).isEmpty { return .superEffective }

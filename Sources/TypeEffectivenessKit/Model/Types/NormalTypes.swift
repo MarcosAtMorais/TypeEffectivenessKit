@@ -55,6 +55,50 @@ enum NormalType: TypeConformable {
         }
     }
     
+    var oneFourthDamageFrom: [PokemonType] {
+        switch self {
+        case .secondType(let type):
+            switch type {
+            case .normal:
+                return []
+            case .fire:
+                return []
+            case .water:
+                return []
+            case .electric:
+                return []
+            case .grass:
+                return []
+            case .ice:
+                return []
+            case .fighting:
+                return []
+            case .poison:
+                return []
+            case .ground:
+                return []
+            case .flying:
+                return []
+            case .psychic:
+                return []
+            case .bug:
+                return []
+            case .rock:
+                return []
+            case .ghost:
+                return []
+            case .dragon:
+                return []
+            case .dark:
+                return []
+            case .steel:
+                return []
+            case .fairy:
+                return []
+            }
+        }
+    }
+    
     var halfDamageFrom: [PokemonType] {
         switch self {
         case .secondType(let type):

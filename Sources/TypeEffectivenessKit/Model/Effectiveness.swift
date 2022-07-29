@@ -11,6 +11,7 @@ enum Effectiveness: Int, RawRepresentable, CaseIterable {
     
     case notLocated
     case noEffect
+    case barelyEffective
     case notVeryEffective
     case effective
     case superEffective
@@ -22,6 +23,8 @@ enum Effectiveness: Int, RawRepresentable, CaseIterable {
             return String(localized: "No Effect")
         case .effective:
             return String(localized: "Effective")
+        case .barelyEffective:
+            return String(localized: "Barely Effective (1/4)")
         case .notVeryEffective:
             return String(localized: "Not Very Effective")
         case .superEffective:
