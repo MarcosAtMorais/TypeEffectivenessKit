@@ -100,11 +100,91 @@ enum NormalType: TypeConformable {
     }
     
     var normalDamageFrom: [PokemonType] {
-        return []
+        switch self {
+        case .secondType(let type):
+            switch type {
+            case .normal:
+                return [.normal, .fire, . water, .electric, .ice, .poison, .ground, .flying, .psychic, .bug, .rock, .dragon, .dark, .steel, .fairy]
+            case .fire:
+                return [.normal, .electric, .poison, .flying, .psychic, .dragon, .dark]
+            case .water:
+                return [.normal, .poison, .ground, .flying, .psychic, .bug, .rock, .dragon, .dark, .fairy]
+            case .electric:
+                return [.normal, .fire, .water, .grass, .ice, .poison, .psychic, .bug, .rock, .dragon, .dark, .fairy]
+            case .grass:
+                return [.normal, .psychic, .rock, .dragon, .dark, .steel, .fairy]
+            case .ice:
+                return [.normal, .water, .electric, .grass, .poison, .ground, .flying, .psychic, .bug, .rock, .dragon, .dark, .fairy]
+            case .fighting:
+                return [.normal, .fire, .water, .electric, .grass, .ice, .poison, .ground, .dragon, .steel]
+            case .poison:
+                return [.normal, .fire, .water, .electric, .ice, .fighting, .flying, .rock, .dragon, .dark, .steel]
+            case .ground:
+                return [.normal, .fire, .grass, .flying, .psychic, .bug, .dragon, .dark, .steel, .fairy]
+            case .flying:
+                return [.normal, .fire, .water, .fighting, .poison, .flying, .psychic, .dragon, .dark, .steel, .fairy]
+            case .psychic:
+                return [.normal, .fire, .water, .electric, .ice, .poison, .fighting, .ground, .flying, .rock, .dragon, .steel, .fairy]
+            case .bug:
+                return [.normal, . water, .electric, .ice, .fire, .poison, .psychic, .bug, .dragon, .dark, .steel, .fairy]
+            case .rock:
+                return [.electric, .ice, .psychic, .bug, .rock, .dragon, .dark, .fairy]
+            case .ghost:
+                return [.fire, .water, .electric, . grass, .ice, .grass, .flying, .psychic, .rock, .dragon, .steel, .fairy]
+            case .dragon:
+                return [.normal, .poison, .ground, .flying, .psychic, .bug, .rock, .dark, .steel]
+            case .dark:
+                return [.normal, .fire, .water ,.electric, .grass, .ice, .poison, .ground, .flying, .rock, .dragon, .steel]
+            case .steel:
+                return [.water, .electric, .dark]
+            case .fairy:
+                return [.normal, .fire, .water, .electric, .grass, .ice, .fighting, .ground, .flying, .psychic, .rock, .fairy]
+            }
+        }
     }
     
     var doubleDamageFrom: [PokemonType] {
-        return []
+        switch self {
+        case .secondType(let type):
+            switch type {
+            case .normal:
+                return [.fighting]
+            case .fire:
+                return [.water, .fighting, .ground, .rock]
+            case .water:
+                return [.electric, .grass, .fighting]
+            case .electric:
+                return [.fighting, .ground]
+            case .grass:
+                return [.fire, .ice, .fighting, .poison, .flying, .bug]
+            case .ice:
+                return [.fire, .rock, .steel]
+            case .fighting:
+                return [.fighting, .flying, .psychic, .fairy]
+            case .poison:
+                return [.ground, .psychic]
+            case .ground:
+                return [.water, .grass, .ice, .fire]
+            case .flying:
+                return [.electric, .ice, .rock]
+            case .psychic:
+                return [.bug, .dark]
+            case .bug:
+                return [.fire, .flying, .rock]
+            case .rock:
+                return [.water, .grass, .ground]
+            case .ghost:
+                return [.dark]
+            case .dragon:
+                return [.ice, .fighting, .dragon, .fairy]
+            case .dark:
+                return [.bug, .fairy]
+            case .steel:
+                return [.fire, .ground]
+            case .fairy:
+                return [.poison, .steel]
+            }
+        }
     }
     
 }
