@@ -35,28 +35,28 @@ struct DualType {
         case .psychic:
             return PsychicType.secondType(type: secondType)
         case .bug:
-            return NormalType.secondType(type: secondType)
+            return BugType.secondType(type: secondType)
         case .rock:
-            return NormalType.secondType(type: secondType)
+            return RockType.secondType(type: secondType)
         case .ghost:
-            return NormalType.secondType(type: secondType)
+            return GhostType.secondType(type: secondType)
         case .dragon:
-            return NormalType.secondType(type: secondType)
+            return DragonType.secondType(type: secondType)
         case .dark:
-            return NormalType.secondType(type: secondType)
+            return DarkType.secondType(type: secondType)
         case .steel:
-            return NormalType.secondType(type: secondType)
+            return SteelType.secondType(type: secondType)
         case .fairy:
-            return NormalType.secondType(type: secondType)
+            return FairyType.secondType(type: secondType)
         }
         
     }
     
-    static public func fetchPokemonType(firstType: PokemonType) -> TypeConformable {
+    static public func fetchPokemonType(singleType: PokemonType) -> TypeConformable {
         
         let secondType = firstType
         
-        switch firstType {
+        switch singleType {
         case .normal:
             return NormalType.secondType(type: secondType)
         case .fire:
@@ -80,19 +80,19 @@ struct DualType {
         case .psychic:
             return PsychicType.secondType(type: secondType)
         case .bug:
-            return NormalType.secondType(type: secondType)
+            return BugType.secondType(type: secondType)
         case .rock:
-            return NormalType.secondType(type: secondType)
+            return RockType.secondType(type: secondType)
         case .ghost:
-            return NormalType.secondType(type: secondType)
+            return GhostType.secondType(type: secondType)
         case .dragon:
-            return NormalType.secondType(type: secondType)
+            return DragonType.secondType(type: secondType)
         case .dark:
-            return NormalType.secondType(type: secondType)
+            return DarkType.secondType(type: secondType)
         case .steel:
-            return NormalType.secondType(type: secondType)
+            return SteelType.secondType(type: secondType)
         case .fairy:
-            return NormalType.secondType(type: secondType)
+            return FairyType.secondType(type: secondType)
         }
         
     }
