@@ -104,7 +104,7 @@ enum NormalType: TypeConformable {
         case .secondType(let type):
             switch type {
             case .normal:
-                return [.normal, .fire, . water, .electric, .ice, .poison, .ground, .flying, .psychic, .bug, .rock, .dragon, .dark, .steel, .fairy]
+                return [.normal, .fire, .water, .electric, .ice, .poison, .ground, .flying, .psychic, .bug, .rock, .dragon, .dark, .steel, .fairy]
             case .fire:
                 return [.normal, .electric, .poison, .flying, .psychic, .dragon, .dark]
             case .water:

@@ -18,49 +18,50 @@ enum FireType: TypeConformable {
             case .normal:
                 return [.ghost]
             case .fire:
-                return [.ghost]
+                return []
             case .water:
-                return [.ghost]
+                return []
             case .electric:
-                return [.ghost]
+                return []
             case .grass:
-                return [.ghost]
+                return []
             case .ice:
-                return [.ghost]
+                return []
             case .fighting:
-                return [.ghost]
+                return []
             case .poison:
-                return [.ghost]
+                return []
             case .ground:
-                return [.ghost, .electric]
+                return [.electric]
             case .flying:
-                return [.ghost, .ground]
+                return [.ground]
             case .psychic:
-                return [.ghost]
+                return []
             case .bug:
-                return [.ghost]
+                return []
             case .rock:
-                return [.ghost]
+                return []
             case .ghost:
-                return [.normal, .fighting, .ghost]
+                return [.normal, .fighting]
             case .dragon:
-                return [.ghost]
+                return []
             case .dark:
-                return [.psychic, .ghost]
+                return [.psychic]
             case .steel:
-                return [.ghost, .poison]
+                return [.poison]
             case .fairy:
-                return [.ghost, .dragon]
+                return [.dragon]
             }
         }
     }
     
+    // TODO: From normal
     var halfDamageFrom: [PokemonType] {
         switch self {
         case .secondType(let type):
             switch type {
             case .normal:
-                return []
+                return [] // <-- HERE
             case .fire:
                 return [.fire, .grass, .ice, .bug, .steel, .fairy]
             case .water:
