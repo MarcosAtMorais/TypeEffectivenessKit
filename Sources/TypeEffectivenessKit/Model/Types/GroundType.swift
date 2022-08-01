@@ -16,41 +16,41 @@ enum GroundType: TypeConformable {
         case .secondType(let type):
             switch type {
             case .normal:
-                return []
+                return [.ghost, .electric]
             case .fire:
-                return []
+                return [.electric]
             case .water:
-                return []
+                return [.electric]
             case .electric:
-                return []
+                return [.electric]
             case .grass:
-                return []
+                return [.electric]
             case .ice:
-                return []
+                return [.electric]
             case .fighting:
-                return []
+                return [.electric]
             case .poison:
-                return []
+                return [.electric]
             case .ground:
-                return []
+                return [.electric]
             case .flying:
-                return []
+                return [.electric, .ground]
             case .psychic:
-                return []
+                return [.electric]
             case .bug:
-                return []
+                return [.electric]
             case .rock:
-                return []
+                return [.electric]
             case .ghost:
-                return []
+                return [.electric, .normal, .fighting]
             case .dragon:
-                return []
+                return [.electric]
             case .dark:
-                return []
+                return [.electric, .psychic]
             case .steel:
-                return []
+                return [.electric, .poison]
             case .fairy:
-                return []
+                return [.electric, .dragon]
             }
         }
     }
@@ -72,9 +72,9 @@ enum GroundType: TypeConformable {
             case .ice:
                 return []
             case .fighting:
-                return []
+                return [.rock]
             case .poison:
-                return []
+                return [.poison]
             case .ground:
                 return []
             case .flying:
@@ -84,15 +84,15 @@ enum GroundType: TypeConformable {
             case .bug:
                 return []
             case .rock:
-                return []
+                return [.poison]
             case .ghost:
-                return []
+                return [.poison]
             case .dragon:
                 return []
             case .dark:
                 return []
             case .steel:
-                return []
+                return [.rock]
             case .fairy:
                 return []
             }
@@ -104,41 +104,41 @@ enum GroundType: TypeConformable {
         case .secondType(let type):
             switch type {
             case .normal:
-                return []
+                return [.poison, .rock]
             case .fire:
-                return []
+                return [.poison, .bug, .steel, .fire, .fairy]
             case .water:
-                return []
+                return [.poison, .rock, .steel, .fire]
             case .electric:
-                return []
+                return [.flying, .poison, .rock, .steel]
             case .grass:
-                return []
+                return [.ground, .rock]
             case .ice:
-                return []
+                return [.poison]
             case .fighting:
-                return []
+                return [.poison, .bug, .dark]
             case .poison:
-                return []
+                return [.fire, .rock, .bug, .fairy]
             case .ground:
-                return []
+                return [.poison, .rock]
             case .flying:
-                return []
+                return [.fighting, .poison, .bug]
             case .psychic:
-                return []
+                return [.psychic, .poison, .rock, .psychic]
             case .bug:
-                return []
+                return [.fighting, .poison, .ground]
             case .rock:
-                return []
+                return [.normal, .flying, .rock, .fire]
             case .ghost:
-                return []
+                return [.rock, .bug]
             case .dragon:
-                return []
+                return [.poison, .rock, .fire]
             case .dark:
-                return []
+                return [.poison, .rock, .ghost, .dark]
             case .steel:
-                return []
+                return [.normal, .flying, .bug, .steel, .psychic, .dragon, .fairy]
             case .fairy:
-                return []
+                return [.fighting, .rock, .bug, .dark]
             }
         }
     }
@@ -148,41 +148,41 @@ enum GroundType: TypeConformable {
         case .secondType(let type):
             switch type {
             case .normal:
-                return []
+                return [.normal, .flying, .ground, .bug, .steel, .fire, .psychic, .dragon, .dark, .fairy]
             case .fire:
-                return []
+                return [.normal, .fighting, .flying, .rock, .ghost, .grass, .psychic, .ice, .dragon, .dark]
             case .water:
-                return []
+                return [.normal, .fighting, .flying, .ground, .bug, .ghost, .water, .psychic, .ice, .dragon, .dark, .fairy]
             case .electric:
-                return []
+                return [.normal, .fighting, .bug, .ghost, .fire, .psychic, .dragon, .dark, .fairy]
             case .grass:
-                return []
+                return [.normal, .fighting, .poison, .ghost, .steel, .water, .grass, .psychic, .dragon, .dark, .fairy]
             case .ice:
-                return []
+                return [.normal, .flying, .ground, .rock, .bug, .ghost, .psychic, .ice, .dragon, .dark, .fairy]
             case .fighting:
-                return []
+                return [.normal, .fighting, .ground, .ghost, .steel, .fire, .dragon]
             case .poison:
-                return []
+                return [.normal, .flying, .ghost, .steel, .fire, .grass, .dragon, .dark]
             case .ground:
-                return []
+                return [.normal, .fighting, .flying, .ground, .bug, .ghost, .steel, .fire, .psychic, .dragon, .dark, .fairy]
             case .flying:
-                return []
+                return [.normal, .flying, .rock, .ghost, .steel, .fire, .grass, .psychic, .dragon, .dark, .fairy]
             case .psychic:
-                return []
+                return [.normal, .flying, .ground, .steel, .fire, .dragon, .fairy]
             case .bug:
-                return []
+                return [.normal, .rock, .bug, .ghost, .steel, .grass, .psychic, .dragon, .dark, .fairy]
             case .rock:
-                return []
+                return [.bug, .ghost, .psychic, .dragon, .dark, .fairy]
             case .ghost:
-                return []
+                return [.flying, .ground, .steel, .fire, .psychic, .dragon, .fairy]
             case .dragon:
-                return []
+                return [.normal, .fighting, .flying, .ground, .bug, .ghost, .steel, .water, .grass, .psychic, .dark]
             case .dark:
-                return []
+                return [.normal, .flying, .ground, .steel, .fire, .dragon]
             case .steel:
-                return []
+                return [.ghost, .grass, .ice, .dark]
             case .fairy:
-                return []
+                return [.normal, .flying, .poison, .ground, .ghost, .fire, .psychic, .fairy]
             }
         }
     }
@@ -192,41 +192,41 @@ enum GroundType: TypeConformable {
         case .secondType(let type):
             switch type {
             case .normal:
-                return []
+                return [.fighting, .water, .grass, .ice]
             case .fire:
-                return []
+                return [.ground]
             case .water:
                 return []
             case .electric:
-                return []
+                return [.ground, .water, .grass, .ice]
             case .grass:
-                return []
+                return [.flying, .bug, .fire]
             case .ice:
-                return []
+                return [.fighting, .steel, .fire, .water, .grass]
             case .fighting:
-                return []
+                return [.flying, .water, .grass, .psychic, .ice, .fairy]
             case .poison:
-                return []
+                return [.ground, .water, .psychic, .ice]
             case .ground:
-                return []
+                return [.water, .grass, .ice]
             case .flying:
-                return []
+                return [.water]
             case .psychic:
-                return []
+                return [.bug, .ghost, .water, .grass, .ice, .dark]
             case .bug:
-                return []
+                return [.flying, .fire, .water, .ice]
             case .rock:
-                return []
+                return [.fighting, .ground, .steel, .ice]
             case .ghost:
-                return []
+                return [.ghost, .water, .grass, .ice, .dark]
             case .dragon:
-                return []
+                return [.dragon, .fairy]
             case .dark:
-                return []
+                return [.fighting, .bug, .water, .grass, .ice, .fairy]
             case .steel:
-                return []
+                return [.fighting, .ground, .fire, .water]
             case .fairy:
-                return []
+                return [.steel, .water, .grass, .ice]
             }
         }
     }
@@ -238,13 +238,13 @@ enum GroundType: TypeConformable {
             case .normal:
                 return []
             case .fire:
-                return []
+                return [.water]
             case .water:
-                return []
+                return [.grass]
             case .electric:
                 return []
             case .grass:
-                return []
+                return [.ice]
             case .ice:
                 return []
             case .fighting:
@@ -254,17 +254,17 @@ enum GroundType: TypeConformable {
             case .ground:
                 return []
             case .flying:
-                return []
+                return [.ice]
             case .psychic:
                 return []
             case .bug:
                 return []
             case .rock:
-                return []
+                return [.water, .grass]
             case .ghost:
                 return []
             case .dragon:
-                return []
+                return [.ice]
             case .dark:
                 return []
             case .steel:
