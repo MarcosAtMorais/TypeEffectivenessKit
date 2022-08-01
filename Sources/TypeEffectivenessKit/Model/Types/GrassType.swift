@@ -16,7 +16,7 @@ enum GrassType: TypeConformable {
         case .secondType(let type):
             switch type {
             case .normal:
-                return []
+                return [.ghost]
             case .fire:
                 return []
             case .water:
@@ -32,9 +32,9 @@ enum GrassType: TypeConformable {
             case .poison:
                 return []
             case .ground:
-                return []
+                return [.electric]
             case .flying:
-                return []
+                return [.ground]
             case .psychic:
                 return []
             case .bug:
@@ -42,15 +42,15 @@ enum GrassType: TypeConformable {
             case .rock:
                 return []
             case .ghost:
-                return []
+                return [.normal, .fighting]
             case .dragon:
                 return []
             case .dark:
-                return []
+                return [.psychic]
             case .steel:
-                return []
+                return [.poison]
             case .fairy:
-                return []
+                return [.dragon]
             }
         }
     }
@@ -62,11 +62,11 @@ enum GrassType: TypeConformable {
             case .normal:
                 return []
             case .fire:
-                return []
+                return [.grass]
             case .water:
-                return []
+                return [.water]
             case .electric:
-                return []
+                return [.electric]
             case .grass:
                 return []
             case .ice:
@@ -74,11 +74,11 @@ enum GrassType: TypeConformable {
             case .fighting:
                 return []
             case .poison:
-                return []
+                return [.grass]
             case .ground:
                 return []
             case .flying:
-                return []
+                return [.grass]
             case .psychic:
                 return []
             case .bug:
@@ -88,11 +88,11 @@ enum GrassType: TypeConformable {
             case .ghost:
                 return []
             case .dragon:
-                return []
+                return [.water, .grass, .electric]
             case .dark:
                 return []
             case .steel:
-                return []
+                return [.grass]
             case .fairy:
                 return []
             }
@@ -104,41 +104,41 @@ enum GrassType: TypeConformable {
         case .secondType(let type):
             switch type {
             case .normal:
-                return []
+                return [.ground, .water, .grass, .electric]
             case .fire:
-                return []
+                return [.steel, .electric, .fairy]
             case .water:
-                return []
+                return [.ground, .steel]
             case .electric:
-                return []
+                return [.steel, .water, .grass]
             case .grass:
-                return []
+                return [.ground, .water, .grass, .electric]
             case .ice:
-                return []
+                return [.ground, .water, .grass, .electric]
             case .fighting:
-                return []
+                return [.ground, .rock, .water, .grass, .electric, .dark]
             case .poison:
-                return []
+                return [.fighting, .water, .electric, .fairy]
             case .ground:
-                return []
+                return [.ground, .rock]
             case .flying:
-                return []
+                return [.fighting, .water]
             case .psychic:
-                return []
+                return [.fighting, .ground, .water, .grass, .electric, .psychic]
             case .bug:
-                return []
+                return [.fighting, .water, .electric]
             case .rock:
-                return []
+                return [.normal, .electric]
             case .ghost:
-                return []
+                return [.ground, .water, .grass, .electric]
             case .dragon:
-                return []
+                return [.ground]
             case .dark:
-                return []
+                return [.ground, .ghost, .water, .grass, .electric, .dark]
             case .steel:
-                return []
+                return [.normal, .rock, .steel, .water, .electric, .psychic, .dragon, .fairy]
             case .fairy:
-                return []
+                return [.fighting, .ground, .water, .grass, .electric, .dark]
             }
         }
     }
@@ -148,41 +148,41 @@ enum GrassType: TypeConformable {
         case .secondType(let type):
             switch type {
             case .normal:
-                return []
+                return [.normal, .rock, .steel, .psychic, .dragon, .dark, .fairy]
             case .fire:
-                return []
+                return [.normal, .fighting, .ground, .bug, .ghost, .fire, .water, .psychic, .ice, .dragon, .dark]
             case .water:
-                return []
+                return [.normal, .fighting, .rock, .ghost, .fire, .grass, .electric, .psychic, .ice, .dragon, .dark, .fairy]
             case .electric:
-                return []
+                return [.normal, .fighting, .flying, .ground, .rock, .ghost, .psychic, .dragon, .dark, .fairy]
             case .grass:
-                return []
+                return [.normal, .fighting, .rock, .ghost, .steel, .psychic, .dragon, .dark, .fairy]
             case .ice:
-                return []
+                return [.normal, .ghost, .psychic, .ice, .dragon, .dark, .fairy]
             case .fighting:
-                return []
+                return [.normal, .fighting, .bug, .ghost, .steel, .dragon]
             case .poison:
-                return []
+                return [.normal, .poison, .ground, .rock, .bug, .ghost, .steel, .dragon, .dark]
             case .ground:
-                return []
+                return [.normal, .fighting, .poison, .ghost, .steel, .water, .grass, .psychic, .dragon, .dark, .fairy]
             case .flying:
-                return []
+                return [.normal, .bug, .ghost, .steel, .electric, .psychic, .dragon, .dark, .fairy]
             case .psychic:
-                return []
+                return [.normal, .rock, .steel, .dragon, .fairy]
             case .bug:
-                return []
+                return [.normal, .ghost, .steel, .psychic, .dragon, .dark, .fairy]
             case .rock:
-                return []
+                return [.flying, .poison, .ground, .rock, .ghost, .fire, .water, .grass, .psychic, .dragon, .dark, .fairy]
             case .ghost:
-                return []
+                return [.poison, .rock, .bug, .steel, .psychic, .dragon, .fairy]
             case .dragon:
-                return []
+                return [.normal, .fighting, .rock, .ghost, .steel, .fire, .psychic, .dark]
             case .dark:
-                return []
+                return [.normal, .rock, .steel, .dragon]
             case .steel:
-                return []
+                return [.flying, .ground, .bug, .ghost, .ice, .dark]
             case .fairy:
-                return []
+                return [.normal, .rock, .bug, .ghost, .psychic, .fairy]
             }
         }
     }
@@ -192,41 +192,41 @@ enum GrassType: TypeConformable {
         case .secondType(let type):
             switch type {
             case .normal:
-                return []
+                return [.fighting, .flying, .poison, .bug, .fire, .ice]
             case .fire:
-                return []
+                return [.flying, .poison, .rock]
             case .water:
-                return []
+                return [.flying, .poison, .bug]
             case .electric:
-                return []
+                return [.poison, .bug, .fire, .ice]
             case .grass:
-                return []
+                return [.flying, .poison, .bug, .fire, .ice]
             case .ice:
-                return []
+                return [.fighting, .flying, .poison, .rock, .bug, .steel]
             case .fighting:
-                return []
+                return [.poison, .fire, .psychic, .ice, .fairy]
             case .poison:
-                return []
+                return [.flying, .fire, .psychic, .ice]
             case .ground:
-                return []
+                return [.flying, .bug, .fire]
             case .flying:
-                return []
+                return [.flying, .poison, .rock, .fire]
             case .psychic:
-                return []
+                return [.flying, .poison, .ghost, .fire, .ice, .dark]
             case .bug:
-                return []
+                return [.poison, .rock, .bug, .ice]
             case .rock:
-                return []
+                return [.fighting, .bug, .steel, .ice]
             case .ghost:
-                return []
+                return [.flying, .ghost, .fire, .ice, .dark]
             case .dragon:
-                return []
+                return [.flying, .poison, .bug, .dragon, .fairy]
             case .dark:
-                return []
+                return [.fighting, .flying, .poison, .fire, .ice , .fairy]
             case .steel:
-                return []
+                return [.fighting]
             case .fairy:
-                return []
+                return [.flying, .steel, .fire, .ice]
             }
         }
     }
@@ -246,31 +246,31 @@ enum GrassType: TypeConformable {
             case .grass:
                 return []
             case .ice:
-                return []
+                return [.fire]
             case .fighting:
-                return []
+                return [.flying]
             case .poison:
                 return []
             case .ground:
-                return []
+                return [.ice]
             case .flying:
-                return []
+                return [.ice]
             case .psychic:
-                return []
+                return [.bug]
             case .bug:
-                return []
+                return [.flying, .fire]
             case .rock:
                 return []
             case .ghost:
                 return []
             case .dragon:
-                return []
+                return [.ice]
             case .dark:
-                return []
+                return [.bug]
             case .steel:
-                return []
+                return [.fire]
             case .fairy:
-                return []
+                return [.poison]
             }
         }
     }
