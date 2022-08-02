@@ -14,19 +14,19 @@ enum Ghost: TypeWeaknessable {
     }
     
     var noDamageFrom: [PokemonType] {
-        return []
+        return [.normal, .fighting]
     }
     
     var halfDamageFrom: [PokemonType] {
-        return [.fighting, .ground, .grass]
+        return [.poison, .bug]
     }
     
     var normalDamageFrom: [PokemonType] {
-        return [.normal, .poison, .bug, .ghost, .steel, .water, .electric, .psychic, .ice, .dragon, .dark, .fairy]
+        return [.flying, .ground, .rock, .steel, .fire, .water, .grass, .electric, .psychic, .ice, .dragon, .fairy]
     }
     
     var doubleDamageFrom: [PokemonType] {
-        return [.flying, .rock, .fire]
+        return [.ghost, .dark]
     }
     
 }
