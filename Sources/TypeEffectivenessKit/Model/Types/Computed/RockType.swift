@@ -7,6 +7,30 @@
 
 import Foundation
 
+enum Rock: TypeWeaknessable {
+    
+    var type: PokemonType {
+        return .rock
+    }
+    
+    var noDamageFrom: [PokemonType] {
+        return []
+    }
+    
+    var halfDamageFrom: [PokemonType] {
+        return [.normal, .flying, .poison, .fire]
+    }
+    
+    var normalDamageFrom: [PokemonType] {
+        return [.rock, .bug, .ghost, .electric, .psychic, .ice, .dragon, .dark, .fairy]
+    }
+    
+    var doubleDamageFrom: [PokemonType] {
+        return [.fighting, .ground, .steel, .water, .grass]
+    }
+    
+}
+
 enum RockType: TypeConformable {
     
     case secondType(type: PokemonType)
