@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Water: TypeWeaknessable {
+struct Water: TypeWeaknessable {
     
     var type: PokemonType {
         return .water

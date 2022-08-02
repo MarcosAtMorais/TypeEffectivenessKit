@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Poison: TypeWeaknessable {
+struct Poison: TypeWeaknessable {
     
     var type: PokemonType {
         return .poison

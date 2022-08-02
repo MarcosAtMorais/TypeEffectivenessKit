@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Fire: TypeWeaknessable {
+struct Fire: TypeWeaknessable {
     
     var type: PokemonType {
         return .fire

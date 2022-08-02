@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Flying: TypeWeaknessable {
+struct Flying: TypeWeaknessable {
     
     var type: PokemonType {
         return .flying
