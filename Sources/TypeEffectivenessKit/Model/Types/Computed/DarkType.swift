@@ -7,6 +7,30 @@
 
 import Foundation
 
+struct Dark: TypeWeaknessable {
+    
+    var type: PokemonType {
+        return .dark
+    }
+    
+    var noDamageFrom: [PokemonType] {
+        return []
+    }
+    
+    var halfDamageFrom: [PokemonType] {
+        return [.rock, .bug, .dark]
+    }
+    
+    var normalDamageFrom: [PokemonType] {
+        return [.normal, .fighting, .poison, .ground, .ghost, .steel, .fire, .water, .grass, .electric, .ice, .dragon]
+    }
+    
+    var doubleDamageFrom: [PokemonType] {
+        return [.flying, .psychic, .fairy]
+    }
+    
+}
+
 enum DarkType: TypeConformable {
     
     case secondType(type: PokemonType)

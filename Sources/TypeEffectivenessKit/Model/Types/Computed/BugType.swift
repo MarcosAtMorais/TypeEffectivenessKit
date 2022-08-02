@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Bug: TypeWeaknessable {
+struct Bug: TypeWeaknessable {
     
     var type: PokemonType {
         return .bug

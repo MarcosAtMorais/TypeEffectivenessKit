@@ -7,6 +7,30 @@
 
 import Foundation
 
+enum Fire: TypeWeaknessable {
+    
+    var type: PokemonType {
+        return .fire
+    }
+    
+    var noDamageFrom: [PokemonType] {
+        return []
+    }
+    
+    var halfDamageFrom: [PokemonType] {
+        return [.bug, .steel, .fire, .grass, .ice, .fairy]
+    }
+    
+    var normalDamageFrom: [PokemonType] {
+        return [.normal, .fighting, .flying, .poison, .ghost, .electric, .psychic, .dragon, .dark]
+    }
+    
+    var doubleDamageFrom: [PokemonType] {
+        return [.ground, .rock, .water]
+    }
+    
+}
+
 enum FireType: TypeConformable {
     
     case secondType(type: PokemonType)

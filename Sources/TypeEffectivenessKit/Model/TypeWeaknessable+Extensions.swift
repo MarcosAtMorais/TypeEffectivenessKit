@@ -83,9 +83,5 @@ extension TypeWeaknessable {
         }
         
     }
-    
-    func checkDamage(offensiveType: PokemonType) -> Effectiveness {
-        
-    }
 
 }
