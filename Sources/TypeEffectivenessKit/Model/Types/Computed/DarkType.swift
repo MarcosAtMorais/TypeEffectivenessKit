@@ -14,19 +14,19 @@ struct Dark: TypeWeaknessable {
     }
     
     var noDamageFrom: [PokemonType] {
-        return []
+        return [.psychic]
     }
     
     var halfDamageFrom: [PokemonType] {
-        return [.rock, .bug, .dark]
+        return [.ghost, .dark]
     }
     
     var normalDamageFrom: [PokemonType] {
-        return [.normal, .fighting, .poison, .ground, .ghost, .steel, .fire, .water, .grass, .electric, .ice, .dragon]
+        return [.normal, .flying, .poison, .ground, .rock, .steel, .fire, .water, .grass, .electric, .ice, .dragon]
     }
     
     var doubleDamageFrom: [PokemonType] {
-        return [.flying, .psychic, .fairy]
+        return [.fighting, .bug, .fairy]
     }
     
 }
