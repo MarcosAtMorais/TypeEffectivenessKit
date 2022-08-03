@@ -14,7 +14,7 @@ struct TypeHGridTitleView: View {
     var body: some View {
         HStack {
             Text(title)
-                .stylizeHeadline()
+                .stylizeCaption()
                 .padding([.all], 5.5)
                 .background {
                     RoundedRectangle(cornerRadius: 10)

@@ -16,10 +16,10 @@ struct TypeEffectivenessView: View {
             VStack {
                 HStack {
                     TypeView(pokemonType: $typeEffectivenessViewModel.moveType)
-                        .frame(maxWidth: 120, maxHeight: Common.spacingBetweenMainElements)
+                        .frame(maxWidth: 120, maxHeight: Common.maxHeightForMainElements)
                     Image(systemName: Common.comparingMoveToTypesSymbol)
                     DualTypeView(firstType: $typeEffectivenessViewModel.firstType, secondType: $typeEffectivenessViewModel.secondType)
-                        .frame(maxHeight: Common.spacingBetweenMainElements)
+                        .frame(maxHeight: Common.maxHeightForMainElements)
                 }
                 .padding()
                 EffectivenessResultView(result: $typeEffectivenessViewModel.result)

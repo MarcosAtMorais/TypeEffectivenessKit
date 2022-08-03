@@ -19,7 +19,7 @@ struct EffectivenessResultView: View {
                 Text(result.localized)
                     .stylizeHeadline(using: .primary)
             }
-            .padding()
+            .padding([.leading, .trailing, .bottom], 15)
     }
 }
 

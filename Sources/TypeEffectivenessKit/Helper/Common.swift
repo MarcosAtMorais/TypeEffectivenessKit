@@ -13,5 +13,6 @@ struct Common {
     static let navigationViewTitle: String = "Type Effectiveness"
     static let comparingMoveToTypesSymbol: String = "arrowshape.zigzag.right.fill"
     static let spacingBetweenMainElements: CGFloat = 20
+    static let maxHeightForMainElements: CGFloat = 20
     
 }

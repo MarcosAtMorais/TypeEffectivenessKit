@@ -1,20 +1,19 @@
 //
-//  StylizeCaption.swift
+//  StylizeHeadline.swift
 //  
 //
-//  Created by Marcos Morais on 03/08/22.
+//  Created by Marcos Morais on 01/08/22.
 //
 
-import Foundation
 import SwiftUI
 
-struct StylizeCaption: ViewModifier {
+struct StylizeHeadline: ViewModifier {
     
     @State var color: Color
     
     func body(content: Content) -> some View {
         content
-            .font(.system(.caption, design: .rounded).bold())
+            .font(.system(.headline, design: .rounded))
             .minimumScaleFactor(0.25)
             .foregroundColor(color)
     }
