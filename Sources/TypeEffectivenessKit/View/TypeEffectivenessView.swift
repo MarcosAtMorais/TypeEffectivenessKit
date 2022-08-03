@@ -18,7 +18,7 @@ struct TypeEffectivenessView: View {
                     TypeView(pokemonType: $typeEffectivenessViewModel.moveType)
                         .frame(maxWidth: 120, maxHeight: Common.spacingBetweenMainElements)
                     Image(systemName: Common.comparingMoveToTypesSymbol)
-                    DualTypeView(pokemonType: $typeEffectivenessViewModel.firstType, secondType: $typeEffectivenessViewModel.secondType)
+                    DualTypeView(firstType: $typeEffectivenessViewModel.firstType, secondType: $typeEffectivenessViewModel.secondType)
                         .frame(maxHeight: Common.spacingBetweenMainElements)
                 }
                 .padding()
@@ -37,13 +37,11 @@ struct TypeEffectivenessView: View {
         
     }
     
-
-    
 }
 
 struct TypeEffectivenessView_Previews: PreviewProvider {
     static var previews: some View {
         TypeEffectivenessView()
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
     }
 }
