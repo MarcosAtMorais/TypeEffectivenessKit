@@ -185,7 +185,7 @@ enum PokemonType: Int, RawRepresentable, CaseIterable {
             case .noEffect:
                 return .noEffect
             case .notVeryEffective:
-                return .barelyEffective
+                return self != otherType ? .barelyEffective : .notVeryEffective
             case .effective:
                 return .notVeryEffective
             case .superEffective:
@@ -215,7 +215,7 @@ enum PokemonType: Int, RawRepresentable, CaseIterable {
             case .effective:
                 return .superEffective
             case .superEffective:
-                return .ultraEffective
+                return self != otherType ? .ultraEffective : .superEffective
             }
         }
         
