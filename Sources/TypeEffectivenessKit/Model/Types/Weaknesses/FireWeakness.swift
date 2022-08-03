@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct Fire: TypeWeaknessable {
+struct FireWeakness: TypeWeaknessable {
+    
+    static var `default`: TypeWeaknessable {
+        return FireWeakness()
+    }
     
     var type: PokemonType {
         return .fire

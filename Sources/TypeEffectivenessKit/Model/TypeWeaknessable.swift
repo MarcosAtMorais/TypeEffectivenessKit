@@ -11,6 +11,8 @@ protocol TypeWeaknessable {
     
     var type: PokemonType { get }
     
+    static var `default`: TypeWeaknessable { get }
+    
     var noDamageFrom: [PokemonType] { get }
     var halfDamageFrom: [PokemonType] { get }
     var normalDamageFrom: [PokemonType] { get }

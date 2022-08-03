@@ -30,8 +30,8 @@ struct TypeEffectivenessExampleView: View {
         
         let damageType = PokemonType.grass
         
-        let pokemonFirstType = Fire()
-        let pokemonSecondType = Poison()
+        let pokemonFirstType = FireWeakness()
+        let pokemonSecondType = PoisonWeakness()
         
         return pokemonFirstType.checkDualTypeEffectiveness(otherType: pokemonSecondType, offensiveType: damageType)
         
@@ -41,8 +41,8 @@ struct TypeEffectivenessExampleView: View {
         
         let damageType = PokemonType.grass
         
-        let pokemonFirstType = Ground()
-        let pokemonSecondType = Water()
+        let pokemonFirstType = GroundWeakness()
+        let pokemonSecondType = WaterWeakness()
         
         let dualType = DualType(firstType: pokemonFirstType, secondType: pokemonSecondType)
         

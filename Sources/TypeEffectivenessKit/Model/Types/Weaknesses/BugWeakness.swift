@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct Bug: TypeWeaknessable {
+struct BugWeakness: TypeWeaknessable {
+    
+    static var `default`: TypeWeaknessable {
+        return BugWeakness()
+    }
     
     var type: PokemonType {
         return .bug

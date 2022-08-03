@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct Water: TypeWeaknessable {
+struct WaterWeakness: TypeWeaknessable {
+    
+    static var `default`: TypeWeaknessable {
+        return WaterWeakness()
+    }
     
     var type: PokemonType {
         return .water
