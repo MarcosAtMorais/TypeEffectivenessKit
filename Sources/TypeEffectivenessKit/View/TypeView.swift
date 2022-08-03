@@ -15,10 +15,13 @@ struct TypeView: View {
         RoundedRectangle(cornerRadius: 5)
             .fill(LinearGradient(colors: pokemonType.colorGradient, startPoint: .topLeading, endPoint: .bottomTrailing))
             .overlay {
-                Text(pokemonType.localizedTitle)
-                    .font(.system(.headline, design: .rounded))
-                    .minimumScaleFactor(0.25)
-                    .foregroundColor(.white)
+                HStack {
+                    Image(pokemonType.image, bundle: .module)
+                        .resizable()
+                        .frame(width: 25, height: 25)
+                    Text(pokemonType.localizedTitle)
+                        .stylizeHeadline(using: .white)
+                }
             }
             .shadow(radius: 2)
             .frame(minWidth: 80, minHeight: 30)

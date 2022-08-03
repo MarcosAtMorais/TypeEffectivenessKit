@@ -154,6 +154,47 @@ enum PokemonType: Int, RawRepresentable, CaseIterable {
         }
     }
     
+    var image: String {
+        switch self {
+        case .normal:
+            return String("Normal_icon_LA")
+        case .fire:
+            return String("Fire_icon_LA")
+        case .water:
+            return String("Water_icon_LA")
+        case .electric:
+            return String("Electric_icon_LA")
+        case .grass:
+            return String("Grass_icon_LA")
+        case .ice:
+            return String("Ice_icon_LA")
+        case .fighting:
+            return String("Fighting_icon_LA")
+        case .poison:
+            return String("Poison_icon_LA")
+        case .ground:
+            return String("Ground_icon_LA")
+        case .flying:
+            return String("Flying_icon_LA")
+        case .psychic:
+            return String("Psychic_icon_LA")
+        case .bug:
+            return String("Bug_icon_LA")
+        case .rock:
+            return String("Rock_icon_LA")
+        case .ghost:
+            return String("Ghost_icon_LA")
+        case .dragon:
+            return String("Dragon_icon_LA")
+        case .dark:
+            return String("Dark_icon_LA")
+        case .steel:
+            return String("Steel_icon_LA")
+        case .fairy:
+            return String("Fairy_icon_LA")
+        }
+    }
+    
     func checkDualTypeEffectiveness(otherType: PokemonType, offensiveType: PokemonType) -> Effectiveness {
         
         let thisTypeWeakness: TypeWeaknessable = weakness

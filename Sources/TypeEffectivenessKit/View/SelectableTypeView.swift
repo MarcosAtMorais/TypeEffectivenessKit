@@ -20,13 +20,22 @@ struct SelectableTypeView: View {
         RoundedRectangle(cornerRadius: 5)
             .fill(LinearGradient(colors: pokemonType.colorGradient, startPoint: .topLeading, endPoint: .bottomTrailing))
             .overlay {
-                Text(pokemonType.localizedTitle)
-                    .font(.system(.headline, design: .rounded))
-                    .minimumScaleFactor(0.25)
-                    .foregroundColor(.white)
+                HStack {
+                    Image(pokemonType.image, bundle: .module)
+                        .resizable()
+                        .frame(width: 25, height: 25)
+                        .padding([.leading], 5)
+                    Spacer().frame(maxWidth: 10)
+                    Text(pokemonType.localizedTitle)
+                        .font(.system(.headline, design: .rounded))
+                        .minimumScaleFactor(0.25)
+                        .foregroundColor(.white)
+                    Spacer()
+                }
+                
             }
             .shadow(radius: 2)
-            .frame(minWidth: 80, maxHeight: 30)
+            .frame(minWidth: 100, maxHeight: 30)
             .opacity(selected ? 1.0 : 0.5)
     }
     

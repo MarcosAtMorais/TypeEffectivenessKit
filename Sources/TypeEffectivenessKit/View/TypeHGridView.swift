@@ -9,9 +9,8 @@ import SwiftUI
 
 struct TypeHGridView: View {
     
-    @State var title: String
     @Binding var selectedType: PokemonType
-    @State var onSelect: (PokemonType) -> () = { _ in }
+    @StateObject var typeViewModel: TypeViewModel
     
     let rows = [
         GridItem(.flexible()),
@@ -21,7 +20,7 @@ struct TypeHGridView: View {
     var body: some View {
         VStack {
             HStack {
-                Text(title)
+                Text(typeViewModel.title)
                     .font((.system(.headline, design: .rounded)))
                     .foregroundColor(.primary)
                     .padding([.all], 5.5)
@@ -39,8 +38,10 @@ struct TypeHGridView: View {
                     ForEach(PokemonType.allCases, id: \.self) { pokemonType in
                         SelectableTypeView(pokemonType: pokemonType, selectedType: $selectedType)
                             .onTapGesture {
-                                selectedType = pokemonType
-                                _ = onSelect(pokemonType)
+                                withAnimation {
+                                    selectedType = pokemonType
+                                    _ = typeViewModel.onSelect(pokemonType)
+                                }
                             }
                     }
                 }
@@ -55,12 +56,11 @@ struct TypeHGridView: View {
                 .opacity(0.25)
                 .shadow(radius: 2)
         }
-        
     }
 }
 
 struct TypeHGridView_Previews: PreviewProvider {
     static var previews: some View {
-        TypeHGridView(title: "Types", selectedType: .constant(.normal))
+        TypeHGridView(selectedType: .constant(.normal), typeViewModel: TypeViewModel())
     }
 }

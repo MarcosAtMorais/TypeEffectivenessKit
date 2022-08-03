@@ -9,13 +9,8 @@ import SwiftUI
 
 struct TypeEffectivenessView: View {
     
-    @State var firstType: PokemonType = .normal
-    @State var secondType: PokemonType = .normal
-    
-    @State var moveType: PokemonType = .fire
-    
-    @State var result: String = ""
-    
+    @StateObject var typeEffectivenessViewModel: TypeEffectivenessViewModel = TypeEffectivenessViewModel(firstType: .water, secondType: .ground, moveType: .grass)
+        
     var body: some View {
         NavigationView {
             VStack {
@@ -23,44 +18,27 @@ struct TypeEffectivenessView: View {
                     .fill(LinearGradient(colors: [.gray.opacity(0.2), .gray.opacity(0.5), .gray], startPoint: .topLeading, endPoint: .bottomTrailing))
                     .frame(maxWidth: .infinity, maxHeight: 50)
                     .overlay {
-                        Text(result)
+                        Text(typeEffectivenessViewModel.result)
                             .font(.system(.headline, design: .rounded))
                             .foregroundColor(.primary)
-                            .onAppear {
-                                result = self.checkWithDualType().localized
-                            }
                     }
                     .padding()
-                
-                TypeHGridView(title: "First Type", selectedType: $firstType) { pokemonType in
-                    // Do something
-                    result = self.checkWithDualType().localized
-                }
-                
+                TypeHGridView(selectedType: $typeEffectivenessViewModel.firstType, typeViewModel: typeEffectivenessViewModel.firstTypeViewModel)
                 Spacer().frame(height: 20)
-                TypeHGridView(title: "Second Type", selectedType: $secondType) { pokemonType in
-                    // Do something
-                    result = self.checkWithDualType().localized
-
-                }
+                TypeHGridView(selectedType: $typeEffectivenessViewModel.secondType, typeViewModel: typeEffectivenessViewModel.secondTypeViewModel)
                 Spacer().frame(height: 40)
-                TypeHGridView(title: "Move Type", selectedType: $moveType) { pokemonType in
-                    // Do something
-                    result = self.checkWithDualType().localized
-                }
+                TypeHGridView(selectedType: $typeEffectivenessViewModel.moveType, typeViewModel: typeEffectivenessViewModel.moveTypeViewModel)
             }
 
             .navigationTitle("Type Effectiveness")
         }
+        .onAppear {
+            self.typeEffectivenessViewModel.makeOnSelect()
+        }
         
     }
     
-    private func checkWithDualType() -> Effectiveness {
 
-        let dualType = DualType(firstType: firstType, secondType: secondType)
-        return dualType.fetchTypeEffectivenessAccordingTo(moveType)
-        
-    }
     
 }
 
