@@ -29,7 +29,6 @@ struct TypeEffectivenessView: View {
                 Spacer().frame(height: 40)
                 TypeHGridView(selectedType: $typeEffectivenessViewModel.moveType, typeViewModel: typeEffectivenessViewModel.moveTypeViewModel)
             }
-
             .navigationTitle("Type Effectiveness")
         }
         .onAppear {
