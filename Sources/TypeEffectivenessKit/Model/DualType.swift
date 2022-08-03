@@ -9,8 +9,8 @@ import Foundation
 
 struct DualType {
     
-    var firstType: TypeWeaknessable
-    var secondType: TypeWeaknessable
+    var firstType: PokemonType
+    var secondType: PokemonType
     
     public func fetchTypeEffectivenessAccordingTo(_ damageType: PokemonType) -> Effectiveness {
         return firstType.checkDualTypeEffectiveness(otherType: secondType, offensiveType: damageType)

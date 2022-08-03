@@ -19,6 +19,5 @@ protocol TypeWeaknessable {
     var doubleDamageFrom: [PokemonType] { get }
     
     func checkEffectiveness(offensiveType: PokemonType) -> SingleTypeEffectiveness
-    func checkDualTypeEffectiveness(otherType: TypeWeaknessable, offensiveType: PokemonType) -> Effectiveness
     
 }

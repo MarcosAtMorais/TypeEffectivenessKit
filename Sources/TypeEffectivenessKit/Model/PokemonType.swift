@@ -70,6 +70,49 @@ enum PokemonType: Int, RawRepresentable, CaseIterable {
         }
     }
     
+    var weakness: TypeWeaknessable {
+        
+        switch self {
+        case .normal:
+            return NormalWeakness.default
+        case .fire:
+            return FireWeakness.default
+        case .water:
+            return WaterWeakness.default
+        case .electric:
+            return ElectricWeakness.default
+        case .grass:
+            return GrassWeakness.default
+        case .ice:
+            return IceWeakness.default
+        case .fighting:
+            return FightingWeakness.default
+        case .poison:
+            return PoisonWeakness.default
+        case .ground:
+            return GroundWeakness.default
+        case .flying:
+            return FlyingWeakness.default
+        case .psychic:
+            return PsychicWeakness.default
+        case .bug:
+            return BugWeakness.default
+        case .rock:
+            return RockWeakness.default
+        case .ghost:
+            return GhostWeakness.default
+        case .dragon:
+            return DragonWeakness.default
+        case .dark:
+            return DarkWeakness.default
+        case .steel:
+            return SteelWeakness.default
+        case .fairy:
+            return FairyWeakness.default
+        }
+        
+    }
+    
     var colorGradient: [Color] {
         switch self {
         case .normal:
@@ -109,6 +152,73 @@ enum PokemonType: Int, RawRepresentable, CaseIterable {
         case .fairy:
             return [.pink.opacity(0.25), .pink]
         }
+    }
+    
+    func checkDualTypeEffectiveness(otherType: PokemonType, offensiveType: PokemonType) -> Effectiveness {
+        
+        let thisTypeWeakness: TypeWeaknessable = weakness
+        let otherTypeWeakness: TypeWeaknessable = otherType.weakness
+        
+        let firstTypeEffectiveness = thisTypeWeakness.checkEffectiveness(offensiveType: offensiveType)
+        let secondTypeEffectiveness = otherTypeWeakness.checkEffectiveness(offensiveType: offensiveType)
+        
+        switch firstTypeEffectiveness {
+        case .notLocated:
+            return .notLocated
+        case .noEffect:
+            switch secondTypeEffectiveness {
+            case .notLocated:
+                return .notLocated
+            case .noEffect:
+                return .noEffect
+            case .notVeryEffective:
+                return .noEffect
+            case .effective:
+                return .noEffect
+            case .superEffective:
+                return .noEffect
+            }
+        case .notVeryEffective:
+            switch secondTypeEffectiveness {
+            case .notLocated:
+                return .notLocated
+            case .noEffect:
+                return .noEffect
+            case .notVeryEffective:
+                return .barelyEffective
+            case .effective:
+                return .notVeryEffective
+            case .superEffective:
+                return .effective
+            }
+        case .effective:
+            switch secondTypeEffectiveness {
+            case .notLocated:
+                return .notLocated
+            case .noEffect:
+                return .noEffect
+            case .notVeryEffective:
+                return .notVeryEffective
+            case .effective:
+                return .effective
+            case .superEffective:
+                return .superEffective
+            }
+        case .superEffective:
+            switch secondTypeEffectiveness {
+            case .notLocated:
+                return .notLocated
+            case .noEffect:
+                return .noEffect
+            case .notVeryEffective:
+                return .effective
+            case .effective:
+                return .superEffective
+            case .superEffective:
+                return .ultraEffective
+            }
+        }
+        
     }
     
 }

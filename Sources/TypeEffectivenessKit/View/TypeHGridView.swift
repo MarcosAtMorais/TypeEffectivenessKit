@@ -10,7 +10,11 @@ import SwiftUI
 struct TypeHGridView: View {
     
     let columns = [
-        GridItem(.adaptive(minimum: 80))
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible())
     ]
     
     var body: some View {
