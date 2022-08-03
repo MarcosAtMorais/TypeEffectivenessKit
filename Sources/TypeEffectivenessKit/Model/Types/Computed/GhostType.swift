@@ -7,30 +7,6 @@
 
 import Foundation
 
-struct Ghost: TypeWeaknessable {
-    
-    var type: PokemonType {
-        return .ghost
-    }
-    
-    var noDamageFrom: [PokemonType] {
-        return [.normal, .fighting]
-    }
-    
-    var halfDamageFrom: [PokemonType] {
-        return [.poison, .bug]
-    }
-    
-    var normalDamageFrom: [PokemonType] {
-        return [.flying, .ground, .rock, .steel, .fire, .water, .grass, .electric, .psychic, .ice, .dragon, .fairy]
-    }
-    
-    var doubleDamageFrom: [PokemonType] {
-        return [.ghost, .dark]
-    }
-    
-}
-
 enum GhostType: TypeConformable {
     
     case secondType(type: PokemonType)
