@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TypeView: View {
     
-    @State var pokemonType: PokemonType = .fire
+    @Binding var pokemonType: PokemonType
     
     var body: some View {
         RoundedRectangle(cornerRadius: 5)
@@ -19,17 +19,23 @@ struct TypeView: View {
                     Image(pokemonType.image, bundle: .module)
                         .resizable()
                         .frame(width: 25, height: 25)
+                        .padding([.leading], 5)
+                    Spacer().frame(maxWidth: 10)
                     Text(pokemonType.localizedTitle)
-                        .stylizeHeadline(using: .white)
+                        .font(.system(.headline, design: .rounded))
+                        .minimumScaleFactor(0.25)
+                        .foregroundColor(.white)
+                    Spacer()
                 }
             }
             .shadow(radius: 2)
-            .frame(minWidth: 80, minHeight: 30)
+            .frame(minWidth: 100, maxHeight: 30)
+            .padding([.leading, .trailing], 2.5)
     }
 }
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        TypeView()
+        TypeView(pokemonType: .constant(.steel))
     }
 }

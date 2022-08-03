@@ -13,7 +13,7 @@ class TypeEffectivenessViewModel: ObservableObject {
     @Published var secondType: PokemonType
     @Published var moveType: PokemonType
     
-    @Published var result: String = ""
+    @Published var result: Effectiveness = .notLocated
     
     @Published var firstTypeViewModel: TypeViewModel
     @Published var secondTypeViewModel: TypeViewModel
@@ -30,16 +30,30 @@ class TypeEffectivenessViewModel: ObservableObject {
     }
     
     public func makeOnSelect() {
+        self.result = self.checkWithDualType()
+        
         self.firstTypeViewModel.onSelect = { [weak self] pokemonType in
-            self?.result = (self?.checkWithDualType().localized).orEmpty
+            guard let checkedResult = self?.checkWithDualType() else {
+                self?.result = .notLocated
+                return
+            }
+            self?.result = checkedResult
         }
         
         self.secondTypeViewModel.onSelect = { [weak self] pokemonType in
-            self?.result = (self?.checkWithDualType().localized).orEmpty
+            guard let checkedResult = self?.checkWithDualType() else {
+                self?.result = .notLocated
+                return
+            }
+            self?.result = checkedResult
         }
         
         self.moveTypeViewModel.onSelect = { [weak self] pokemonType in
-            self?.result = (self?.checkWithDualType().localized).orEmpty
+            guard let checkedResult = self?.checkWithDualType() else {
+                self?.result = .notLocated
+                return
+            }
+            self?.result = checkedResult
         }
     }
     

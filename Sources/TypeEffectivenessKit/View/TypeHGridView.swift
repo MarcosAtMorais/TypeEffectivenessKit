@@ -19,20 +19,7 @@ struct TypeHGridView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text(typeViewModel.title)
-                    .font((.system(.headline, design: .rounded)))
-                    .foregroundColor(.primary)
-                    .padding([.all], 5.5)
-                    .background {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(LinearGradient(colors: [.pink, .purple], startPoint: .topLeading, endPoint: .bottomTrailing))
-                            .opacity(0.45)
-                            .shadow(radius: 2)
-                    }
-                Spacer()
-            }
-            .padding([.leading, .trailing], 15)
+            TypeHGridTitleView(title: $typeViewModel.title)
             ScrollView(.horizontal) {
                 LazyHGrid(rows: rows, spacing: 10) {
                     ForEach(PokemonType.allCases, id: \.self) { pokemonType in
@@ -52,9 +39,7 @@ struct TypeHGridView: View {
         .padding([.top], 17.5)
         .background {
             RoundedRectangle(cornerRadius: 10)
-                .fill(LinearGradient(colors: [.purple, .cyan], startPoint: .topLeading, endPoint: .bottomTrailing))
-                .opacity(0.25)
-                .shadow(radius: 2)
+                .fillGradientOpacityAndShadow(using: [.purple, .cyan])
         }
     }
 }

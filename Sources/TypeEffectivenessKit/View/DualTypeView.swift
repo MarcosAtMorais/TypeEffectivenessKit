@@ -9,14 +9,14 @@ import SwiftUI
 
 struct DualTypeView: View {
     
-    @State var pokemonType: PokemonType = .fire
-    @State var secondType: PokemonType = .ghost
+    @Binding var pokemonType: PokemonType
+    @Binding var secondType: PokemonType
     
     var body: some View {
         HStack {
-            TypeView(pokemonType: pokemonType)
+            TypeView(pokemonType: $pokemonType)
             Spacer().frame(maxWidth: 5)
-            TypeView(pokemonType: secondType)
+            TypeView(pokemonType: $secondType)
         }
 
     }
@@ -24,6 +24,6 @@ struct DualTypeView: View {
 
 struct DualTypeView_Previews: PreviewProvider {
     static var previews: some View {
-        DualTypeView()
+        DualTypeView(pokemonType: .constant(.fire), secondType: .constant(.ghost))
     }
 }

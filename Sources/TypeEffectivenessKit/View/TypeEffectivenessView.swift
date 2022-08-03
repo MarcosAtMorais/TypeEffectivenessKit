@@ -14,22 +14,22 @@ struct TypeEffectivenessView: View {
     var body: some View {
         NavigationView {
             VStack {
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(LinearGradient(colors: [.gray.opacity(0.2), .gray.opacity(0.5), .gray], startPoint: .topLeading, endPoint: .bottomTrailing))
-                    .frame(maxWidth: .infinity, maxHeight: 50)
-                    .overlay {
-                        Text(typeEffectivenessViewModel.result)
-                            .font(.system(.headline, design: .rounded))
-                            .foregroundColor(.primary)
-                    }
-                    .padding()
+                HStack {
+                    TypeView(pokemonType: $typeEffectivenessViewModel.moveType)
+                        .frame(maxWidth: 120, maxHeight: Common.spacingBetweenMainElements)
+                    Image(systemName: Common.comparingMoveToTypesSymbol)
+                    DualTypeView(pokemonType: $typeEffectivenessViewModel.firstType, secondType: $typeEffectivenessViewModel.secondType)
+                        .frame(maxHeight: Common.spacingBetweenMainElements)
+                }
+                .padding()
+                EffectivenessResultView(result: $typeEffectivenessViewModel.result)
                 TypeHGridView(selectedType: $typeEffectivenessViewModel.firstType, typeViewModel: typeEffectivenessViewModel.firstTypeViewModel)
-                Spacer().frame(height: 20)
+                Spacer().frame(height: Common.spacingBetweenMainElements)
                 TypeHGridView(selectedType: $typeEffectivenessViewModel.secondType, typeViewModel: typeEffectivenessViewModel.secondTypeViewModel)
-                Spacer().frame(height: 40)
+                Spacer().frame(height: Common.spacingBetweenMainElements)
                 TypeHGridView(selectedType: $typeEffectivenessViewModel.moveType, typeViewModel: typeEffectivenessViewModel.moveTypeViewModel)
             }
-            .navigationTitle("Type Effectiveness")
+            .navigationTitle(Common.navigationViewTitle)
         }
         .onAppear {
             self.typeEffectivenessViewModel.makeOnSelect()
