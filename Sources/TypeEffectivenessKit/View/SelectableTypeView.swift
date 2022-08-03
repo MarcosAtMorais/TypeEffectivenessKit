@@ -1,15 +1,20 @@
 //
-//  TypeView.swift
+//  SwiftUIView.swift
 //  
 //
-//  Created by Marcos Morais on 29/07/22.
+//  Created by Marcos Morais on 03/08/22.
 //
 
 import SwiftUI
 
-struct TypeView: View {
+struct SelectableTypeView: View {
     
     @State var pokemonType: PokemonType = .fire
+    @Binding var selectedType: PokemonType
+    
+    var selected: Bool {
+        pokemonType == selectedType
+    }
     
     var body: some View {
         RoundedRectangle(cornerRadius: 5)
@@ -22,11 +27,13 @@ struct TypeView: View {
             }
             .shadow(radius: 2)
             .frame(minWidth: 80, maxHeight: 30)
+            .opacity(selected ? 1.0 : 0.25)
     }
+    
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
+struct SelectableTypeView_Previews: PreviewProvider {
     static var previews: some View {
-        TypeView()
+        SelectableTypeView(selectedType: .constant(.fire))
     }
 }
