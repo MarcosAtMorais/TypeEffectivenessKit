@@ -13,16 +13,20 @@ struct TypeEffectivenessExampleView: View {
     @State var secondResult: String = ""
     
     var body: some View {
-        VStack {
-            Text(result)
-                .onAppear {
-                    result = self.exampleCheck().localized
-                }
-            Text(secondResult)
-                .onAppear {
-                    secondResult = self.exampleCheckWithDualType().localized
-                }
+        NavigationView {
+            VStack {
+                Text(result)
+                    .onAppear {
+                        result = self.exampleCheck().localized
+                    }
+                Text(secondResult)
+                    .onAppear {
+                        secondResult = self.exampleCheckWithDualType().localized
+                    }
+            }
+            .navigationTitle("Type Effectiveness")
         }
+
 
     }
     

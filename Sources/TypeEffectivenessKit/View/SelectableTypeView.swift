@@ -27,7 +27,7 @@ struct SelectableTypeView: View {
             }
             .shadow(radius: 2)
             .frame(minWidth: 80, maxHeight: 30)
-            .opacity(selected ? 1.0 : 0.25)
+            .opacity(selected ? 1.0 : 0.5)
     }
     
 }

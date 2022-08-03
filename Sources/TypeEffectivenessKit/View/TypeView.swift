@@ -21,7 +21,7 @@ struct TypeView: View {
                     .foregroundColor(.white)
             }
             .shadow(radius: 2)
-            .frame(minWidth: 80, maxHeight: 30)
+            .frame(minWidth: 80, minHeight: 30)
     }
 }
 
