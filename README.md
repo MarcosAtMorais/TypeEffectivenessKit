@@ -87,4 +87,4 @@ You can also add this library using Swift Package Manager.
 
 ## 💭 Related
 
-This package is just for hobby and educational purposes. It may not be used for commercial releases. Pokémon is a trademark of Nintendo. No copyright or trademark infringement is intended.
+This package is just for hobby and educational purposes. It may not be used for commercial releases. Pokémon is a trademark of Nintendo, Game Freak, The Pokémon Company and Creatures Inc. No copyright or trademark infringement is intended.
