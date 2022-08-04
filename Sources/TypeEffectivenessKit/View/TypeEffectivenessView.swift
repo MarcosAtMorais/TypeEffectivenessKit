@@ -7,11 +7,14 @@
 
 import SwiftUI
 
-struct TypeEffectivenessView: View {
+/**
+ An example of how the framework works under the hood. It includes some examples of best practices when working with SwiftUI at an architecture level, as well as the usage of components and leverage with Swifts foundational practices. I hope this helps you out.
+ */
+public struct TypeEffectivenessView: View {
     
     @StateObject var typeEffectivenessViewModel: TypeEffectivenessViewModel = TypeEffectivenessViewModel(firstType: .water, secondType: .ground, moveType: .grass)
         
-    var body: some View {
+    public var body: some View {
         NavigationView {
             VStack {
                 HStack {
