@@ -8,8 +8,12 @@
 import Foundation
 import SwiftUI
 
+/**
+ Simple styling with font (as .caption, rounded design and a bold aspect), minimumScaleFactor for dynamicType when applicable and a foregroundColor for the text/symbol.
+ */
 struct StylizeCaption: ViewModifier {
     
+    /// Color of the given text/symbol.
     @State var color: Color
     
     func body(content: Content) -> some View {
