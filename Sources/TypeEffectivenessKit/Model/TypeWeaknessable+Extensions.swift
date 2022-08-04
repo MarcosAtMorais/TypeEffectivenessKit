@@ -7,6 +7,9 @@
 
 import Foundation
 
+/**
+ Extension that provides a default implementation of checkEffectiveness.
+ */
 extension TypeWeaknessable {
     
     func checkEffectiveness(offensiveType: PokemonType) -> SingleTypeEffectiveness {
