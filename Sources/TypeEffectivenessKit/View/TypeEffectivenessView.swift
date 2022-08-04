@@ -50,6 +50,5 @@ public struct TypeEffectivenessView: View {
 struct TypeEffectivenessView_Previews: PreviewProvider {
     static var previews: some View {
         TypeEffectivenessView()
-            .preferredColorScheme(.light)
     }
 }
