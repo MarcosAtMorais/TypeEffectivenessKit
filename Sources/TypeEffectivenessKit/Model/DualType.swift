@@ -9,11 +9,15 @@ import Foundation
 
 public struct DualType {
     
+    // MARK: - Properties
+    
     /// The First Type of the Pokemon
     var firstType: PokemonType
     /// The Second Type of the Pokemon
     var secondType: PokemonType
     
+    // MARK: - Effectiveness Methods
+
     /**
      Fetches the type effectiveness according to the damageType (PokemonType) provided and returns an effectiveness.
      

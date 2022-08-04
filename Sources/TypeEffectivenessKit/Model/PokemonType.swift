@@ -10,6 +10,8 @@ import SwiftUI
 
 public enum PokemonType: Int, RawRepresentable, CaseIterable {
     
+    // MARK: - Properties
+
     case normal
     case fire
     case water

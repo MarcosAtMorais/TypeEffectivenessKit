@@ -10,6 +10,7 @@ import XCTest
 
 class TypeWeaknessableTests: XCTestCase {
 
+    // MARK: - Setup
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -17,6 +18,8 @@ class TypeWeaknessableTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    // MARK: - Initializer Tests
 
     func test_init_whenWeaknessUsingCase_shouldSucceed() throws {
         let sut = BugWeakness.default
@@ -54,6 +57,8 @@ class TypeWeaknessableTests: XCTestCase {
         }
         
     }
+    
+    // MARK: Checking Effectiveness Tests
     
     func test_whenCheckingForEffectivenessForSingleType_shouldSucceed() {
         

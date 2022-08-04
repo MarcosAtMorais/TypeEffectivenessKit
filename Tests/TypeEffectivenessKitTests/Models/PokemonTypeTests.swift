@@ -10,6 +10,8 @@ import XCTest
 
 class PokemonTypeTests: XCTestCase {
 
+    // MARK: - Setup
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -18,6 +20,8 @@ class PokemonTypeTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    // MARK: - Initializer Tests
+    
     func test_init_shouldHaveLocalizedTitleOnAllCases() {
         
         let types = PokemonType.allCases
@@ -65,6 +69,8 @@ class PokemonTypeTests: XCTestCase {
         let sut = PokemonType(rawValue: 0)
         XCTAssertNotNil(sut)
     }
+    
+    // MARK: - Check Effectiveness Tests
     
     func test_checkEffectiveness_whenGivenDualType_shouldSucceed() {
         

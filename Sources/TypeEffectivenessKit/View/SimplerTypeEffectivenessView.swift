@@ -12,6 +12,8 @@ import SwiftUI
  */
 struct SimplerTypeEffectivenessView: View {
     
+    // MARK: - Properties
+
     /// Pokémon First Type
     @State var pokemonFirstType: PokemonType = .grass
     /// Pokémon Second Type
@@ -24,6 +26,8 @@ struct SimplerTypeEffectivenessView: View {
         self.checkTypeEffectivenessWithDualType(firstType: pokemonFirstType, secondType: pokemonSecondType, moveType: pokemonMoveType)
     }
     
+    // MARK: - View
+
     var body: some View {
         VStack {
             HStack {
@@ -50,6 +54,8 @@ struct SimplerTypeEffectivenessView: View {
                 .fillGradientOpacityAndShadow(using: [.purple, .cyan], opacity: 0.80)
         }
     }
+    
+    // MARK: - Check Effectiveness Methods
     
     private func checkTypeEffectiveness(firstType: PokemonType, secondType: PokemonType, moveType: PokemonType) -> Effectiveness {
         

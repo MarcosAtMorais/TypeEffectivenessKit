@@ -10,8 +10,11 @@ import XCTest
 
 class TypeEffectivenessViewModelTests: XCTestCase {
     
+    // MARK: - Properties
+    
     var sut: TypeEffectivenessViewModel!
 
+    // MARK: - Setup
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
@@ -26,7 +29,8 @@ class TypeEffectivenessViewModelTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         sut = nil
     }
-
+    
+    // MARK: - Initializer Tests
     func test_init_whenPassingArguments_shouldSucceed() throws {
         let firstType: PokemonType = .water
         let secondType: PokemonType = .ground

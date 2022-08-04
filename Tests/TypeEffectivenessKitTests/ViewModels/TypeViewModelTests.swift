@@ -9,7 +9,8 @@ import XCTest
 @testable import TypeEffectivenessKit
 
 class TypeViewModelTests: XCTestCase {
-
+    
+    // MARK: - Setup
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -18,6 +19,7 @@ class TypeViewModelTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    // MARK: - Initializer Tests
     func test_init_whenPassingTitle_shouldSucceed() throws {
         let inputTitle: String = "Test"
         let sut = TypeViewModel(title: "Test")
@@ -40,6 +42,8 @@ class TypeViewModelTests: XCTestCase {
         
         XCTAssertNotNil(sut.onSelect)
     }
+    
+    // MARK: - Callback Tests
     
     func test_whenWithPokemonType_shouldPassthroughAndSucceed() {
         

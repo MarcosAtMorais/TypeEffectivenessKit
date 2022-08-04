@@ -9,6 +9,8 @@ import Foundation
 
 class TypeViewModel: ObservableObject {
     
+    // MARK: - Properties
+    
     /// The title that is going to be used on our container LazyHGrid.
     @Published var title: String
     
@@ -21,6 +23,9 @@ class TypeViewModel: ObservableObject {
         - title: The Title of the LazyHGrid.
         - onSelect: The callback to when the selection occurs.
      */
+    
+    // MARK: - Initializers
+
     public init(title: String = "Types", onSelect: @escaping (PokemonType) -> () = { _ in }) {
         self.title = title
         self.onSelect = onSelect

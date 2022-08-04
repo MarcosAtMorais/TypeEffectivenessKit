@@ -12,9 +12,13 @@ import SwiftUI
  */
 public struct TypeEffectivenessView: View {
     
+    // MARK: - Properties
+
     /// The ViewModel that dictates several logic for our little app.
     @StateObject var typeEffectivenessViewModel: TypeEffectivenessViewModel = TypeEffectivenessViewModel(firstType: .water, secondType: .ground, moveType: .grass)
         
+    // MARK: - View
+
     public var body: some View {
         NavigationView {
             VStack {

@@ -12,6 +12,7 @@ import Foundation
  */
 class TypeEffectivenessViewModel: ObservableObject {
     
+    // MARK: - Properties
     /// This is the firstType, or Primary Type of the Pokemon
     @Published var firstType: PokemonType
     /// This is the secondType, or Secondary Type of the Pokemon. If it's the same as the firstType, the Pokemon becomes single-typed.
@@ -45,6 +46,7 @@ class TypeEffectivenessViewModel: ObservableObject {
         self.moveTypeViewModel = TypeViewModel(title: "Move Type")
     }
     
+    // MARK: - Setup
     /**
      Makes the onSelect for each type ViewModel with callbacks.
      */
@@ -66,6 +68,7 @@ class TypeEffectivenessViewModel: ObservableObject {
         
     }
     
+    // MARK: Internal First Update Methods
     /**
      Checks the DualType effectiveness using the firstType and secondType, as well as the move PokemonType as the damageType.
      
