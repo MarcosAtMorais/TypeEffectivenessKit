@@ -6,20 +6,20 @@
 
 ## ✨ Features
 
-- Type Weaknesses: No Effect, Barely Effective (1/4), Not Very Effective (1/2), Effective, Super Effective (2x) and Ultra Effective (4x).
-- The relationships are all ready. Both for Single and Dual Types. A PokemonType has its weaknesses, as well as some identifiers.
-- Easily check a type. Just bring the method for Checking Effectiveness and you'll be able to check everything.
-- Built Swiftly and with lightweight in mind.
-- 100% Swift.
-- Three examples are included in the package. All using SwiftUI, following architectural patterns and leveraging SwiftUI's power.
-- Fully documented and tested.
-- Updated from the latest games released.
-- This will be very useful especially for Terastal Pokémon and Tera Raid Battles on the brand-new games.
+- **Type Weaknesses**: No Effect, Barely Effective (1/4), Not Very Effective (1/2), Effective, Super Effective (2x) and Ultra Effective (4x).
+- **The relationships are all ready**. Both for Single and Dual Types. A PokemonType has its weaknesses, as well as some identifiers.
+- **Easily check a type**. Just bring the method for Checking Effectiveness and you'll be able to check everything.
+- **Built Swifty** and with **lightweight** in mind.
+- **100% Swift**.
+- **Three examples** are included in the package. All using SwiftUI, following **architectural patterns and leveraging SwiftUI's power**.
+- Fully **documented** and **tested**.
+- **Update**d from the latest games released.
+- This will be very useful especially for **Terastal Pokémon** and **Tera Raid Battles** on the brand-new games.
 
 ## 🚀 Get Started
 
 ### Using TypeEffectivenessKit in Production Code
-Just import TypeEffectivenessKit:
+Just **import TypeEffectivenessKit**:
 
 ```swift
 import TypeEffectivenessKit
@@ -68,12 +68,12 @@ This package also includes several **SwiftUI views that display the types, color
 
 You can also add this library using Swift Package Manager.
 
-1. Go to File > Add Packages.
+1. Go to **File > Add Packages**.
 2. The Add Package dialog will appear, by default with Apple packages.
-3. In the upper right hand corner, paste https://github.com/MarcosAtMorais/TypeEffectivenessKit into the search bar.
-4. Hit Return to kick off the search.
-5. Click Add Package.
-6. You're all set! Just import TypeEffectivenessKit whenever and wherever you want to use it.
+3. In the upper right hand corner, paste https://github.com/MarcosAtMorais/TypeEffectivenessKit into the **search bar**.
+4. Hit **Return** to kick off the search.
+5. Click **Add Package**.
+6. You're all set! Just **import TypeEffectivenessKit** whenever and wherever you want to use it.
 
 ## 💭 Related
 
@@ -81,7 +81,10 @@ This package is just for hobby and educational purposes. It may not be used for 
 
 ## 🌟 Requirements
 
-iOS 15+
-macOS 12+
-watchOS 7+
-tvOS 14+
+**iOS** 15+
+
+**macOS** 12+
+
+**watchOS** 7+
+
+**tvOS** 14+
