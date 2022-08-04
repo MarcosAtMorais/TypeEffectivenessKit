@@ -32,6 +32,24 @@ class TypeConformableTests: XCTestCase {
         XCTAssertNotNil(type)
         
     }
+    
+    func test_init_dualTypeConformance_whenDualType_shouldSucceed() {
+        
+        let dualType = DualTypeConformable.fetchPokemonType(firstType: .water, secondType: .steel)
+        let dualTypeOffensiveAttack = PokemonType.electric
+        
+        XCTAssertEqual(dualType.checkDamage(offensiveType: dualTypeOffensiveAttack), .superEffective)
+        
+    }
+    
+    func test_init_dualTypeConformance_whenSingleType_shouldSucceed() {
+        
+        let singleType = DualTypeConformable.fetchPokemonType(singleType: .fire)
+        let dualTypeOffensiveAttack = PokemonType.water
+        
+        XCTAssertEqual(singleType.checkDamage(offensiveType: dualTypeOffensiveAttack), .superEffective)
+        
+    }
 
     func test_checkDamage_whenTestingAllCasesForBugType_shouldSucceed() {
         
