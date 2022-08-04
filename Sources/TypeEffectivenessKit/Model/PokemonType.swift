@@ -276,4 +276,20 @@ public enum PokemonType: Int, RawRepresentable, CaseIterable {
         
     }
     
+    /**
+     Checks the effectiveness of a Pokemon Move Type according to the current type (case of this enum).
+     
+     - parameters:
+        - offensiveType: The move type that is going to be checked for Effectiveness against this enum case and the otherType (primary and secondary Pokemon types).
+     - returns: An Effectiveness accordingly.
+     */
+    func checkSingleTypeEffectiveness(offensiveType: PokemonType) -> SingleTypeEffectiveness {
+        
+        let thisTypeWeakness: TypeWeaknessable = weakness
+        let typeEffectiveness = thisTypeWeakness.checkEffectiveness(offensiveType: offensiveType)
+        
+        return typeEffectiveness
+        
+    }
+    
 }
