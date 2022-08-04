@@ -66,6 +66,33 @@ class PokemonTypeTests: XCTestCase {
         XCTAssertNotNil(sut)
     }
     
+    func test_checkEffectiveness_whenGivenDualType_shouldSucceed() {
+        
+        let inputFirstType = PokemonType.water
+        let inputSecondType = PokemonType.ground
+        let inputMoveType = PokemonType.grass
+        
+        let dualType = DualType(firstType: inputFirstType, secondType: inputSecondType)
+        
+        let effectiveness = dualType.fetchTypeEffectivenessAccordingTo(inputMoveType)
+        
+        XCTAssertEqual(effectiveness, .ultraEffective)
+        
+    }
+    
+    func test_checkEffectiveness_whenGivenDualType_shouldFail() {
+        
+        let inputFirstType = PokemonType.water
+        let inputSecondType = PokemonType.ground
+        let inputMoveType = PokemonType.grass
+        
+        let dualType = DualType(firstType: inputFirstType, secondType: inputSecondType)
+        let effectiveness = dualType.fetchTypeEffectivenessAccordingTo(inputMoveType)
+        
+        XCTAssertNotEqual(effectiveness, .notVeryEffective)
+        
+    }
+    
     func test_checkEffectiveness_shouldBeAbleToCheckDualTypeEffectiveness() {
         let types = PokemonType.allCases
         let inputSecondPokemonType = PokemonType.fire
