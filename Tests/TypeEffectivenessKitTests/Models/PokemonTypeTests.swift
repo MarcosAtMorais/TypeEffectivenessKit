@@ -66,7 +66,6 @@ class PokemonTypeTests: XCTestCase {
         XCTAssertNotNil(sut)
     }
     
-    // TODO: Should be an Integration Test
     func test_checkEffectiveness_whenGivenDualType_shouldSucceed() {
         
         let inputFirstType = PokemonType.water
@@ -81,7 +80,6 @@ class PokemonTypeTests: XCTestCase {
         
     }
     
-    // TODO: Should be an Integration Test
     func test_checkEffectiveness_whenGivenDualType_shouldFail() {
         
         let inputFirstType = PokemonType.water
