@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ The effectiveness result view. It houses an Effectiveness binding that *must* be provided to be rendered.
+ */
 struct EffectivenessResultView: View {
     
     @Binding var result: Effectiveness

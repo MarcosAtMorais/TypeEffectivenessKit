@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+/**
+ A SwiftUI View container that provides two TypeViews (with no selection actions) given two PokemonTypes. If both are the same type, the view hides with animation the secondary type.
+ 
+ - parameters:
+    - firstType: PokemonType that will be the primary type.
+    - secondType: PokemonType that will be the secondary type.
+ 
+ - returns:
+    - A container view with two TypeViews.
+ */
 struct DualTypeView: View {
     
     @Binding var firstType: PokemonType

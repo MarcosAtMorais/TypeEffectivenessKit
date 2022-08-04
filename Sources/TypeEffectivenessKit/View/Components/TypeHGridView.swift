@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ A horizontal grid view that places SelectableTypeViews as GridItems. All items are flexible.
+ */
 struct TypeHGridView: View {
     
     @Binding var selectedType: PokemonType
@@ -32,7 +35,7 @@ struct TypeHGridView: View {
         }
         .padding([.top], 17.5)
         .background {
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: Common.roundedRectangleCornerRadius)
                 .fillGradientOpacityAndShadow(using: [.purple, .cyan])
         }
     }

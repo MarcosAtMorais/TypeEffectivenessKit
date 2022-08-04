@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ A SwiftUI view that provides information related to the PokemonType. This is Single-Typed and consists of a RoundedRectangle.
+ */
 struct TypeView: View {
     
     @Binding var pokemonType: PokemonType

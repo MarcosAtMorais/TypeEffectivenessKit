@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ A view that houses the title for the TypeHGridView.
+ */
 struct TypeHGridTitleView: View {
     
     @Binding var title: String

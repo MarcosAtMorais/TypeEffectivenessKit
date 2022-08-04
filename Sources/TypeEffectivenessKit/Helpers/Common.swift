@@ -17,5 +17,6 @@ struct Common {
     static let comparingMoveToTypesSymbol: String = "arrowshape.zigzag.right.fill"
     static let spacingBetweenMainElements: CGFloat = 20
     static let maxHeightForMainElements: CGFloat = 20
+    static let roundedRectangleCornerRadius: CGFloat = 10
     
 }

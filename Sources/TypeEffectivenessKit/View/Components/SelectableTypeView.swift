@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ A Selectable SwiftUI view that provides information related to the PokemonType. This is Single-Typed and consists of a Button thet has a RoundedRectangle as a Label.
+ */
 struct SelectableTypeView: View {
     
     @State var pokemonType: PokemonType = .fire
@@ -23,7 +26,6 @@ struct SelectableTypeView: View {
                 self.selectedType = pokemonType
                 onSelect(pokemonType)
             }
-            
         } label: {
             RoundedRectangle(cornerRadius: 5)
                 .fill(LinearGradient(colors: pokemonType.colorGradient, startPoint: .topLeading, endPoint: .bottomTrailing))
