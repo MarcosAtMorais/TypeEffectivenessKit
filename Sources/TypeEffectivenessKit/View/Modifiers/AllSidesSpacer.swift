@@ -13,26 +13,26 @@ import Foundation
  */
 struct AllSidesSpacer: ViewModifier {
     
-    /// Horizontal spacing/padding that both .leading and .trailing are going to minumumly have.
-    @State var horizontalPadding: CGFloat = 5
+    /// Horizontal minimum spacing that both .leading and .trailing are going to minumumly have.
+    @State var horizontalMinimumSpacing: CGFloat = 5
     /// Hertical spacing/padding that both .top and .bottom are going to minumumly have.
-    @State var verticalPadding: CGFloat = 5
+    @State var verticalMinimumSpacing: CGFloat = 5
     
     /**
      - returns: some View with the ViewModifier applied
      - parameters:
-        - horizontalPadding: the horizontal spacing that both .leading and .trailing are going to minumumly have.
-        - verticalPadding: the vertical spacing that both .top and .bottom are going to minumumly have.
+        - horizontalMinimumSpacing: the horizontal spacing that both .leading and .trailing are going to minumumly have.
+        - verticalMinimumSpacing: the vertical spacing that both .top and .bottom are going to minumumly have.
      */
     func body(content: Content) -> some View {
         VStack {
-            Spacer(minLength: verticalPadding)
+            Spacer(minLength: verticalMinimumSpacing)
             HStack {
-                Spacer(minLength: horizontalPadding)
+                Spacer(minLength: horizontalMinimumSpacing)
                 content
-                Spacer(minLength: horizontalPadding)
+                Spacer(minLength: horizontalMinimumSpacing)
             }
-            Spacer(minLength: verticalPadding)
+            Spacer(minLength: verticalMinimumSpacing)
         }
     }
     

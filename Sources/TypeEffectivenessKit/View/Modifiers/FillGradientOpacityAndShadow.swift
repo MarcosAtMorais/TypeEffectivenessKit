@@ -25,8 +25,8 @@ struct FillGradientOpacityAndShadow: ViewModifier {
     /**
      - returns: some View with the ViewModifier applied
      - parameters:
-        - colors: the horizontal spacing that both .leading and .trailing are going to minumumly have.
-        - opacity: the vertical spacing that both .top and .bottom are going to minumumly have.
+        - colors: the colors that will compose the background gradient.
+        - opacity: the opacity of the whole background view.
         - shadowRadius: a radius for the shadow that is going to be applied to the view.
      */
     func body(content: Content) -> some View {
