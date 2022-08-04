@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ElectricWeakness: TypeWeaknessable {
+public struct ElectricWeakness: TypeWeaknessable {
     
     static var `default`: TypeWeaknessable {
         return ElectricWeakness()

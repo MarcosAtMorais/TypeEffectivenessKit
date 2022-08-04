@@ -38,7 +38,7 @@ struct TypeView: View {
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
+struct TypeView_Previews: PreviewProvider {
     static var previews: some View {
         TypeView(pokemonType: .constant(.steel))
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RockWeakness: TypeWeaknessable {
+public struct RockWeakness: TypeWeaknessable {
     
     static var `default`: TypeWeaknessable {
         return RockWeakness()

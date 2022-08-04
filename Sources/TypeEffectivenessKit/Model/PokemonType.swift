@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum PokemonType: Int, RawRepresentable, CaseIterable {
+public enum PokemonType: Int, RawRepresentable, CaseIterable {
     
     case normal
     case fire

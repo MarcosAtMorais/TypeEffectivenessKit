@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DualType {
+public struct DualType {
     
     /// The First Type of the Pokemon
     var firstType: PokemonType
