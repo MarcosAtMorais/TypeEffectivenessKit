@@ -23,13 +23,7 @@ struct TypeHGridView: View {
             ScrollView(.horizontal) {
                 LazyHGrid(rows: rows, spacing: 10) {
                     ForEach(PokemonType.allCases, id: \.self) { pokemonType in
-                        SelectableTypeView(pokemonType: pokemonType, selectedType: $selectedType)
-                            .onTapGesture {
-                                withAnimation {
-                                    selectedType = pokemonType
-                                    _ = typeViewModel.onSelect(pokemonType)
-                                }
-                            }
+                        SelectableTypeView(pokemonType: pokemonType, selectedType: $selectedType, onSelect: $typeViewModel.onSelect)
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: 72.5)
