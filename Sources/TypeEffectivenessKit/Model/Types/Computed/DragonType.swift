@@ -126,7 +126,7 @@ enum DragonType: TypeConformable {
             case .psychic:
                 return [.fighting, .fire, .water, .grass, .electric, .psychic]
             case .bug:
-                return [.fighting, .grass, .water, .electric]
+                return [.fighting, .ground, .water, .electric]
             case .rock:
                 return [.normal, .flying, .poison, .electric]
             case .ghost:

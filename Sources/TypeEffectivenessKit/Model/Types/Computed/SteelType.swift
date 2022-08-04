@@ -150,7 +150,7 @@ enum SteelType: TypeConformable {
             case .normal:
                 return [.water, .electric, .dark]
             case .fire:
-                return [.rock, .ghost, .fairy, .electric, .dark]
+                return [.rock, .ghost, .fire, .electric, .dark]
             case .water:
                 return [.ghost, .fire, .grass, .dark]
             case .electric:
@@ -222,7 +222,7 @@ enum SteelType: TypeConformable {
             case .dragon:
                 return [.fighting, .ground]
             case .dark:
-                return [.fairy]
+                return [.fire, .ground]
             case .steel:
                 return [.fighting, .ground, .fire]
             case .fairy:

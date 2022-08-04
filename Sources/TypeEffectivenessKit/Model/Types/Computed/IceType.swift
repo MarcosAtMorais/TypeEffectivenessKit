@@ -182,7 +182,7 @@ enum IceType: TypeConformable {
             case .steel:
                 return [.rock, .ghost, .steel, .water, .electric, .dark]
             case .fairy:
-                return [.normal, .fighting, .flying, .grass, .ghost, .water, .grass, .electric, .psychic, .fairy]
+                return [.normal, .fighting, .flying, .grass, .ghost, .water, .ground, .electric, .psychic, .fairy]
             }
         }
     }

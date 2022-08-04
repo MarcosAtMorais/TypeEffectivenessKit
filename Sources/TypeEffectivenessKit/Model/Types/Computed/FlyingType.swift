@@ -224,7 +224,7 @@ enum FlyingType: TypeConformable {
             case .dark:
                 return [.rock, .electric, .ice, .fairy]
             case .steel:
-                return [.fighting, .rock, .ghost, .water, .ice, .dark]
+                return [.fire, .electric]
             case .fairy:
                 return [.poison, .rock, .steel, .electric, .ice]
             }

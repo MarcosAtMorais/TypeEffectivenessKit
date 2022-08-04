@@ -180,7 +180,7 @@ enum BugType: TypeConformable {
             case .dark:
                 return [.normal, .fighting, .poison, .steel, .water, .electric, .ice, .dragon]
             case .steel:
-                return [.normal, .bug, .steel, .psychic, .ice, .dragon, .fairy]
+                return [.fighting, .flying, .ground, .rock, .ghost, .water, .electric, .dark]
             case .fairy:
                 return [.normal, .ghost, .water, .electric, .psychic, .ice, .fairy]
             }

@@ -208,7 +208,7 @@ enum PoisonType: TypeConformable {
             case .poison:
                 return [.ground, .psychic]
             case .ground:
-                return [.normal, .flying, .ghost, .steel, .fire, .grass, .dragon, .dark]
+                return [.ground, .water, .psychic, .ice]
             case .flying:
                 return [.rock, .electric, .psychic, .ice]
             case .psychic:

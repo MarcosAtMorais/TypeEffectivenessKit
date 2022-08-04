@@ -84,7 +84,7 @@ enum WaterType: TypeConformable {
             case .bug:
                 return []
             case .rock:
-                return []
+                return [.fire]
             case .ghost:
                 return []
             case .dragon:

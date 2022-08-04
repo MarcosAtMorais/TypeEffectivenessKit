@@ -110,7 +110,7 @@ enum PsychicType: TypeConformable {
             case .water:
                 return [.fighting, .steel, .fire, .water, .psychic, .ice]
             case .electric:
-                return [.fighting, .flying, .steel, .electric]
+                return [.fighting, .flying, .steel, .electric, .psychic]
             case .grass:
                 return [.fighting, .ground, .water, .grass, .electric, .psychic]
             case .ice:

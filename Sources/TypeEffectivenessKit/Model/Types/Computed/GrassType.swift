@@ -82,7 +82,7 @@ enum GrassType: TypeConformable {
             case .psychic:
                 return []
             case .bug:
-                return []
+                return [.ground, .grass]
             case .rock:
                 return []
             case .ghost:

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol TypeConformable {
-    
+
     /**
      This variable is responsible to organize and enumerate all PokemonTypes that have a *noEffect* damage weakness.
      */

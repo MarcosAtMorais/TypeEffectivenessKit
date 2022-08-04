@@ -118,13 +118,13 @@ enum GroundType: TypeConformable {
             case .fighting:
                 return [.poison, .bug, .dark]
             case .poison:
-                return [.fire, .rock, .bug, .fairy]
+                return [.fighting, .rock, .bug, .fairy]
             case .ground:
                 return [.poison, .rock]
             case .flying:
                 return [.fighting, .poison, .bug]
             case .psychic:
-                return [.psychic, .poison, .rock, .psychic]
+                return [.fighting, .poison, .rock, .psychic]
             case .bug:
                 return [.fighting, .poison, .ground]
             case .rock:
