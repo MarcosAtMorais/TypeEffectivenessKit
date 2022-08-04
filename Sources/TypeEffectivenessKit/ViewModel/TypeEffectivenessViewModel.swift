@@ -27,6 +27,14 @@ class TypeEffectivenessViewModel: ObservableObject {
     @Published var secondTypeViewModel: TypeViewModel
     @Published var moveTypeViewModel: TypeViewModel
 
+    /**
+     The main initializer for the TypeEffectivenessViewModel
+     - parameters:
+        - firstType: The PokemonType that consists of the Primary Type for the Pokemon.
+        - secondType: The PokemonType that consists of the Secondary Type for the Pokemon.
+        - moveType: The PokemonType that consists of the Move Type, which is going to be used against the Pokemon firstType and secondType.
+
+     */
     public init(firstType: PokemonType, secondType: PokemonType, moveType: PokemonType) {
         self.firstType = firstType
         self.secondType = secondType

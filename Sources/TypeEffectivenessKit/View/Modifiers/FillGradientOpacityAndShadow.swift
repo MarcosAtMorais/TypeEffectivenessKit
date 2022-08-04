@@ -23,11 +23,11 @@ struct FillGradientOpacityAndShadow: ViewModifier {
     @State var shadowRadius: CGFloat
     
     /**
-     - returns: some View with the ViewModifier applied
      - parameters:
         - colors: the colors that will compose the background gradient.
         - opacity: the opacity of the whole background view.
         - shadowRadius: a radius for the shadow that is going to be applied to the view.
+     - returns: The view with the ViewModifier applied.
      */
     func body(content: Content) -> some View {
         content
