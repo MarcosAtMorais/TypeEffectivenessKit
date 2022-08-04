@@ -8,6 +8,9 @@
 import Foundation
 import CoreGraphics
 
+/**
+ A set of commonly used simple value-types across the package.
+ */
 struct Common {
     
     static let navigationViewTitle: String = "Type Effectiveness"
