@@ -12,9 +12,13 @@ import SwiftUI
  */
 struct TypeHGridView: View {
     
+    /// A binding to the currently selectedType on the hierarchy (can be firstType, secondType or moveType).
     @Binding var selectedType: PokemonType
+    
+    /// A ViewModel to compose and use business logic to do certain functionalities outside the view-side.
     @StateObject var typeViewModel: TypeViewModel
     
+    /// The rows that will compose our LazyHGrid.
     let rows = [
         GridItem(.flexible()),
         GridItem(.flexible()),

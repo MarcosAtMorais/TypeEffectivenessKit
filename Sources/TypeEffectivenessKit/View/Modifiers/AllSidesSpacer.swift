@@ -19,10 +19,10 @@ struct AllSidesSpacer: ViewModifier {
     @State var verticalMinimumSpacing: CGFloat = 5
     
     /**
-     - returns: some View with the ViewModifier applied
      - parameters:
         - horizontalMinimumSpacing: the horizontal spacing that both .leading and .trailing are going to minumumly have.
         - verticalMinimumSpacing: the vertical spacing that both .top and .bottom are going to minumumly have.
+     - returns: The view with the ViewModifier applied.
      */
     func body(content: Content) -> some View {
         VStack {

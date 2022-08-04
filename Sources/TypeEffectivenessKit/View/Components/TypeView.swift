@@ -12,6 +12,7 @@ import SwiftUI
  */
 struct TypeView: View {
     
+    /// A binding to the selectedType in the hierarchy (inside TypeEffectivenessViewModel).
     @Binding var pokemonType: PokemonType
     
     var body: some View {

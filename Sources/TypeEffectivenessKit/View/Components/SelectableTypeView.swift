@@ -12,10 +12,14 @@ import SwiftUI
  */
 struct SelectableTypeView: View {
     
+    /// The PokemonType of the view.
     @State var pokemonType: PokemonType = .fire
+    /// A binding to the selectedType in the hierarchy (probably the TypeHGridView -> TypeViewModel).
     @Binding var selectedType: PokemonType
+    /// A binding to the onSelect in the hierarchy (probably the TypeHGridView -> TypeViewModel).
     @Binding var onSelect: (PokemonType) -> ()
     
+    /// A checking if the type is currently the selected one for updates of the UI.
     var selected: Bool {
         pokemonType == selectedType
     }

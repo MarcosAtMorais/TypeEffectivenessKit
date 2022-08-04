@@ -7,14 +7,22 @@
 
 import Foundation
 
+/**
+ The ViewModel responsible for coordinating several aspects of the display of Types, Effectiveness and Results.
+ */
 class TypeEffectivenessViewModel: ObservableObject {
     
+    /// This is the firstType, or Primary Type of the Pokemon
     @Published var firstType: PokemonType
+    /// This is the secondType, or Secondary Type of the Pokemon. If it's the same as the firstType, the Pokemon becomes single-typed.
     @Published var secondType: PokemonType
+    /// This is the moveType, or the PokemonType move that is going to be calculated into the Types of the Pokemon (firstType and secondType).
     @Published var moveType: PokemonType
     
+    /// The result after checking the **firstType**, **secondType** with the *moveType*.
     @Published var result: Effectiveness = .notLocated
     
+    /// The ViewModels for each container of PokemonTypes.
     @Published var firstTypeViewModel: TypeViewModel
     @Published var secondTypeViewModel: TypeViewModel
     @Published var moveTypeViewModel: TypeViewModel
@@ -29,10 +37,14 @@ class TypeEffectivenessViewModel: ObservableObject {
         self.moveTypeViewModel = TypeViewModel(title: "Move Type")
     }
     
+    /**
+     Makes the onSelect for each type ViewModel with callbacks.
+     */
     public func makeOnSelect() {
+        
         self.result = self.checkWithDualType()
         
-        self.firstTypeViewModel.onSelect = { [weak self] pokemonType in
+        let callback: (PokemonType) -> () = { [weak self] pokemonType in
             guard let checkedResult = self?.checkWithDualType() else {
                 self?.result = .notLocated
                 return
@@ -40,23 +52,17 @@ class TypeEffectivenessViewModel: ObservableObject {
             self?.result = checkedResult
         }
         
-        self.secondTypeViewModel.onSelect = { [weak self] pokemonType in
-            guard let checkedResult = self?.checkWithDualType() else {
-                self?.result = .notLocated
-                return
-            }
-            self?.result = checkedResult
-        }
+        self.firstTypeViewModel.onSelect = callback
+        self.secondTypeViewModel.onSelect = callback
+        self.moveTypeViewModel.onSelect = callback
         
-        self.moveTypeViewModel.onSelect = { [weak self] pokemonType in
-            guard let checkedResult = self?.checkWithDualType() else {
-                self?.result = .notLocated
-                return
-            }
-            self?.result = checkedResult
-        }
     }
     
+    /**
+     Checks the DualType effectiveness using the firstType and secondType, as well as the move PokemonType as the damageType.
+     
+     - returns: The effectiveness of the Move PokemonType against the DualType (firstType and secondType).
+     */
     private func checkWithDualType() -> Effectiveness {
         let dualType = DualType(firstType: firstType, secondType: secondType)
         return dualType.fetchTypeEffectivenessAccordingTo(moveType)

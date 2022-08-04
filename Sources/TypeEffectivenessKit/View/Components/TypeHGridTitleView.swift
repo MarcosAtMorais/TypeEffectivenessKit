@@ -12,6 +12,7 @@ import SwiftUI
  */
 struct TypeHGridTitleView: View {
     
+    /// A binding to the title that will compose the TitleView.
     @Binding var title: String
     
     var body: some View {

@@ -37,8 +37,7 @@ protocol TypeWeaknessable {
      
      - parameters:
         - offensiveType: the move type that is going to be verifyied with the type variable of this TypeWeaknessable.
-     - returns:
-        - A SingleTypeEffectiveness that can be used independently or with Effectiveness as a DualType checking.
+     - returns: A SingleTypeEffectiveness that can be used independently or with Effectiveness as a DualType checking.
      */
     func checkEffectiveness(offensiveType: PokemonType) -> SingleTypeEffectiveness
     

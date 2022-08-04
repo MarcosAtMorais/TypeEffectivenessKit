@@ -12,6 +12,7 @@ import SwiftUI
  */
 struct EffectivenessResultView: View {
     
+    /// This result is provided by the calculation made in the ViewModel.
     @Binding var result: Effectiveness
     
     var body: some View {
