@@ -75,10 +75,6 @@ You can also add this library using Swift Package Manager.
 5. Click **Add Package**.
 6. You're all set! Just **import TypeEffectivenessKit** whenever and wherever you want to use it.
 
-## 💭 Related
-
-This package is just for hobby and educational purposes. It may not be used for commercial releases. Pokémon is a trademark of Nintendo. No copyright or trademark infringement is intended.
-
 ## 🌟 Requirements
 
 **iOS** 15+
@@ -88,3 +84,7 @@ This package is just for hobby and educational purposes. It may not be used for 
 **watchOS** 7+
 
 **tvOS** 14+
+
+## 💭 Related
+
+This package is just for hobby and educational purposes. It may not be used for commercial releases. Pokémon is a trademark of Nintendo. No copyright or trademark infringement is intended.
