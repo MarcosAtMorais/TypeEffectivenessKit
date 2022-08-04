@@ -7,6 +7,9 @@
 
 import Foundation
 
+/**
+This effectiveness is the complete one, that also checks for DualType effectiveness such as Barely Effective (1/4x the damage) and Ultra Effective (4x the damage).
+ */
 enum Effectiveness: Int, RawRepresentable, CaseIterable {
     
     case notLocated
@@ -17,6 +20,7 @@ enum Effectiveness: Int, RawRepresentable, CaseIterable {
     case superEffective
     case ultraEffective
     
+    /// The Localized Title for each Pokemon Effectiveness.
     var localized: String {
         switch self {
         case .noEffect:
@@ -38,6 +42,9 @@ enum Effectiveness: Int, RawRepresentable, CaseIterable {
     
 }
 
+/**
+This effectiveness is the single type one, that checks for common single-type pokemon effectiveness.
+ */
 enum SingleTypeEffectiveness: Int, RawRepresentable, CaseIterable {
     
     case notLocated
@@ -46,6 +53,7 @@ enum SingleTypeEffectiveness: Int, RawRepresentable, CaseIterable {
     case effective
     case superEffective
     
+    /// The Localized Title for each Pokemon Effectiveness.
     var localized: String {
         switch self {
         case .noEffect:

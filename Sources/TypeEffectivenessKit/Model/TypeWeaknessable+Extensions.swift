@@ -8,7 +8,7 @@
 import Foundation
 
 /**
- Extension that provides a default implementation of checkEffectiveness.
+ Extension that provides a default implementation of checkEffectiveness for TypeWeaknessable.
  */
 extension TypeWeaknessable {
     

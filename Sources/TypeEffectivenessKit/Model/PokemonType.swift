@@ -29,6 +29,7 @@ enum PokemonType: Int, RawRepresentable, CaseIterable {
     case steel
     case fairy
     
+    /// The Localized Title for each Pokemon Type.
     var localizedTitle: String {
         switch self {
         case .normal:
@@ -70,6 +71,7 @@ enum PokemonType: Int, RawRepresentable, CaseIterable {
         }
     }
     
+    /// A TypeWeaknessable that maps all weaknesses given a case of this enum (PokemonType)
     var weakness: TypeWeaknessable {
         
         switch self {
@@ -113,6 +115,7 @@ enum PokemonType: Int, RawRepresentable, CaseIterable {
         
     }
     
+    /// A gradient that represents the current case of this enum according to the PokemonType.
     var colorGradient: [Color] {
         switch self {
         case .normal:
@@ -154,6 +157,7 @@ enum PokemonType: Int, RawRepresentable, CaseIterable {
         }
     }
     
+    /// An image that represents the current case of this enum according to the PokemonType.
     var image: String {
         switch self {
         case .normal:
@@ -195,6 +199,14 @@ enum PokemonType: Int, RawRepresentable, CaseIterable {
         }
     }
     
+    /**
+     Checks the effectiveness of a Pokemon Move Type according to the current type (case of this enum) and the other type it has (secondaryType). If it's the same type (primary and secondary), it is treated as a single type.
+     
+     - parameters:
+        - otherType: The secondary type of the Pokemon. (Treating as a DualType, but if it's the same type (primary and secondary), it is treated as a single type).
+        - offensiveType: The move type that is going to be checked for Effectiveness against this enum case and the otherType (primary and secondary Pokemon types).
+     - returns: An Effectiveness accordingly.
+     */
     func checkDualTypeEffectiveness(otherType: PokemonType, offensiveType: PokemonType) -> Effectiveness {
         
         let thisTypeWeakness: TypeWeaknessable = weakness
