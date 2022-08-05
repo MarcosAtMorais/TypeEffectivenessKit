@@ -26,6 +26,14 @@ public struct SimplerTypeEffectivenessView: View {
         self.checkTypeEffectivenessWithDualType(firstType: pokemonFirstType, secondType: pokemonSecondType, moveType: pokemonMoveType)
     }
     
+    // MARK: - Initializer
+    
+    public init(pokemonFirstType: PokemonType = .grass, pokemonSecondType: PokemonType = .fire, pokemonMoveType: PokemonType = .water) {
+        self.pokemonFirstType = pokemonFirstType
+        self.pokemonSecondType = pokemonSecondType
+        self.pokemonMoveType = pokemonMoveType
+    }
+    
     // MARK: - View
 
     public var body: some View {
@@ -84,6 +92,6 @@ public struct SimplerTypeEffectivenessView: View {
 
 struct SimplerTypeEffectivenessView_Previews: PreviewProvider {
     static var previews: some View {
-        SimplerTypeEffectivenessView()
+        SimplerTypeEffectivenessView(pokemonFirstType: .grass, pokemonSecondType: .fire, pokemonMoveType: .water)
     }
 }

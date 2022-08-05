@@ -9,27 +9,27 @@ import Foundation
 
 public struct BugWeakness: TypeWeaknessable {
     
-    static var `default`: TypeWeaknessable {
+    public static var `default`: TypeWeaknessable {
         return BugWeakness()
     }
     
-    var type: PokemonType {
+    public var type: PokemonType {
         return .bug
     }
     
-    var noDamageFrom: [PokemonType] {
+    public var noDamageFrom: [PokemonType] {
         return []
     }
     
-    var halfDamageFrom: [PokemonType] {
+    public var halfDamageFrom: [PokemonType] {
         return [.fighting, .ground, .grass]
     }
     
-    var normalDamageFrom: [PokemonType] {
+    public var normalDamageFrom: [PokemonType] {
         return [.normal, .poison, .bug, .ghost, .steel, .water, .electric, .psychic, .ice, .dragon, .dark, .fairy]
     }
     
-    var doubleDamageFrom: [PokemonType] {
+    public var doubleDamageFrom: [PokemonType] {
         return [.flying, .rock, .fire]
     }
     

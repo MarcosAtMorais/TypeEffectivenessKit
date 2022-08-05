@@ -15,8 +15,15 @@ public struct TypeEffectivenessView: View {
     // MARK: - Properties
 
     /// The ViewModel that dictates several logic for our little app.
-    @StateObject var typeEffectivenessViewModel: TypeEffectivenessViewModel = TypeEffectivenessViewModel(firstType: .water, secondType: .ground, moveType: .grass)
+    @StateObject var typeEffectivenessViewModel: TypeEffectivenessViewModel = TypeEffectivenessViewModel(firstType: .water, secondType: .fire, moveType: .ground)
         
+    
+    // MARK: - Initializer
+    
+    public init(typeEffectivenessViewModel: TypeEffectivenessViewModel = TypeEffectivenessViewModel(firstType: .water, secondType: .fire, moveType: .ground)) {
+        self._typeEffectivenessViewModel = StateObject(wrappedValue: typeEffectivenessViewModel)
+    }
+    
     // MARK: - View
 
     public var body: some View {
@@ -49,7 +56,7 @@ public struct TypeEffectivenessView: View {
 
 struct TypeEffectivenessView_Previews: PreviewProvider {
     static var previews: some View {
-        TypeEffectivenessView()
+        TypeEffectivenessView(typeEffectivenessViewModel: TypeEffectivenessViewModel(firstType: .fire, secondType: .ground, moveType: .water))
             .preferredColorScheme(.dark)
     }
 }

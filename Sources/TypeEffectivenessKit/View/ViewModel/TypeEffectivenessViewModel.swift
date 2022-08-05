@@ -10,23 +10,23 @@ import Foundation
 /**
  The ViewModel responsible for coordinating several aspects of the display of Types, Effectiveness and Results.
  */
-class TypeEffectivenessViewModel: ObservableObject {
+public class TypeEffectivenessViewModel: ObservableObject {
     
     // MARK: - Properties
     /// This is the firstType, or Primary Type of the Pokemon
-    @Published var firstType: PokemonType
+    @Published public var firstType: PokemonType
     /// This is the secondType, or Secondary Type of the Pokemon. If it's the same as the firstType, the Pokemon becomes single-typed.
-    @Published var secondType: PokemonType
+    @Published public var secondType: PokemonType
     /// This is the moveType, or the PokemonType move that is going to be calculated into the Types of the Pokemon (firstType and secondType).
-    @Published var moveType: PokemonType
+    @Published public var moveType: PokemonType
     
     /// The result after checking the **firstType**, **secondType** with the *moveType*.
-    @Published var result: Effectiveness = .notLocated
+    @Published public var result: Effectiveness = .notLocated
     
     /// The ViewModels for each container of PokemonTypes.
-    @Published var firstTypeViewModel: TypeViewModel
-    @Published var secondTypeViewModel: TypeViewModel
-    @Published var moveTypeViewModel: TypeViewModel
+    @Published public var firstTypeViewModel: TypeViewModel
+    @Published public var secondTypeViewModel: TypeViewModel
+    @Published public var moveTypeViewModel: TypeViewModel
 
     /**
      The main initializer for the TypeEffectivenessViewModel

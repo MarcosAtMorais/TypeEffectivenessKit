@@ -17,6 +17,11 @@ public struct WeaknessDisplayExampleView: View {
     /// Type that you want to check the weaknesses
     @State var pokemonType: PokemonType = .ghost
     
+    // MARK: - Initializer
+    public init(pokemonType: PokemonType = .ghost) {
+        self.pokemonType = pokemonType
+    }
+    
     // MARK: - View
     
     public var body: some View {

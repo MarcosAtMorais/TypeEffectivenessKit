@@ -9,27 +9,27 @@ import Foundation
 
 public struct ElectricWeakness: TypeWeaknessable {
     
-    static var `default`: TypeWeaknessable {
+    public static var `default`: TypeWeaknessable {
         return ElectricWeakness()
     }
     
-    var type: PokemonType {
+    public var type: PokemonType {
         return .electric
     }
     
-    var noDamageFrom: [PokemonType] {
+    public var noDamageFrom: [PokemonType] {
         return []
     }
     
-    var halfDamageFrom: [PokemonType] {
+    public var halfDamageFrom: [PokemonType] {
         return [.flying, .steel, .electric]
     }
     
-    var normalDamageFrom: [PokemonType] {
+    public var normalDamageFrom: [PokemonType] {
         return [.normal, .fighting, .poison, .rock, .bug, .ghost, .fire, .water, .grass, .psychic, .ice, .dragon, .dark, .fairy]
     }
     
-    var doubleDamageFrom: [PokemonType] {
+    public var doubleDamageFrom: [PokemonType] {
         return [.ground]
     }
     

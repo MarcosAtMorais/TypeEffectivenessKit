@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol TypeWeaknessable {
+public protocol TypeWeaknessable {
     
     /// The PokemonType associated with the TypeWekanessable. This type includes everything a regular PokemonType has to offer.
     var type: PokemonType { get }

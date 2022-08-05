@@ -9,27 +9,27 @@ import Foundation
 
 public struct PoisonWeakness: TypeWeaknessable {
     
-    static var `default`: TypeWeaknessable {
+    public static var `default`: TypeWeaknessable {
         return PoisonWeakness()
     }
     
-    var type: PokemonType {
+    public var type: PokemonType {
         return .poison
     }
     
-    var noDamageFrom: [PokemonType] {
+    public var noDamageFrom: [PokemonType] {
         return []
     }
     
-    var halfDamageFrom: [PokemonType] {
+    public var halfDamageFrom: [PokemonType] {
         return [.fighting, .poison, .bug, .grass, .fairy]
     }
     
-    var normalDamageFrom: [PokemonType] {
+    public var normalDamageFrom: [PokemonType] {
         return [.normal, .flying, .rock, .ghost, .steel, .fire, .water, .electric, .ice, .dragon, .dark]
     }
     
-    var doubleDamageFrom: [PokemonType] {
+    public var doubleDamageFrom: [PokemonType] {
         return [.ground, .psychic]
     }
     

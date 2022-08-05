@@ -12,7 +12,7 @@ import Foundation
  */
 extension TypeWeaknessable {
     
-    func checkEffectiveness(offensiveType: PokemonType) -> SingleTypeEffectiveness {
+    public func checkEffectiveness(offensiveType: PokemonType) -> SingleTypeEffectiveness {
                 
         if !noDamageFrom.filter({ $0 == offensiveType }).isEmpty { return .noEffect }
         if !halfDamageFrom.filter({ $0 == offensiveType }).isEmpty { return .notVeryEffective }

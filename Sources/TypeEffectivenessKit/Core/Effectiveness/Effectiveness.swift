@@ -21,7 +21,7 @@ public enum Effectiveness: Int, RawRepresentable, CaseIterable {
     case ultraEffective
     
     /// The Localized Title for each Pokemon Effectiveness.
-    var localized: String {
+    public var localized: String {
         switch self {
         case .noEffect:
             return String(localized: "No Effect")
@@ -54,7 +54,7 @@ public enum SingleTypeEffectiveness: Int, RawRepresentable, CaseIterable {
     case superEffective
     
     /// The Localized Title for each Pokemon Effectiveness.
-    var localized: String {
+    public var localized: String {
         switch self {
         case .noEffect:
             return String(localized: "No Effect")
