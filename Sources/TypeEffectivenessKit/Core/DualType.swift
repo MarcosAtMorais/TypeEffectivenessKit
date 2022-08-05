@@ -16,6 +16,13 @@ public struct DualType {
     /// The Second Type of the Pokemon
     var secondType: PokemonType
     
+    // MARK: - Initializers
+    
+    public init(firstType: PokemonType, secondType: PokemonType) {
+        self.firstType = firstType
+        self.secondType = secondType
+    }
+    
     // MARK: - Effectiveness Methods
 
     /**
