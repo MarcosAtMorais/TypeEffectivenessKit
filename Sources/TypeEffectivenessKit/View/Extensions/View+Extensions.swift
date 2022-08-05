@@ -23,6 +23,20 @@ extension View {
     }
     
     /**
+     Simple styling with font (as .caption, rounded design and a bold aspect), imageScaling for dynamicType when applicable and a foregroundColor for the text/symbol, as well as opacity.
+     
+      - parameters:
+         - color: a foregroundColor that is going to be applied to the source (text or symbol).
+         - opacity: a CGFloat that will be used as the opacity.
+     
+      - returns: A view with the ViewModifier applied, with the font (.title and rounded), imageScaling of .large, the color as the foregroundColor and the opacity.
+
+     */
+    func stylizeIcon(using color: Color, opacity: CGFloat) -> some View {
+        modifier(StylizeIcon(color: color, colorOpacity: opacity))
+    }
+    
+    /**
      Simple styling with font (as .caption, rounded design and a bold aspect), minimumScaleFactor for dynamicType when applicable and a foregroundColor for the text/symbol.
      
       - parameters:
@@ -33,6 +47,20 @@ extension View {
      */
     func stylizeCaption(using color: Color = .primary) -> some View {
         modifier(StylizeCaption(color: color))
+    }
+    
+    /**
+     A container SwiftUI view where the content is aligned correctly both vertically and horizontally, using a minimum spacing/padding if needed. If not, 0 spacing would do the trick.
+     
+      - parameters:
+         - colors: the horizontal spacing that both .leading and .trailing are going to minumumly have.
+         - opacity: the vertical spacing that both .top and .bottom are going to minumumly have.
+         - shadowRadius: a radius for the shadow that is going to be applied to the view.
+     
+      - returns: A view with the ViewModifier applied, with minimumSpacing applied and centered at all edges. Default is horizontalMinimumSpacing = 0 and verticalMinimumSpacing = 0
+     */
+    func spaceAtAllSides(horizontalMinimumSpacing: CGFloat = 0, verticalMinimumSpacing: CGFloat = 0) -> some View {
+        modifier(AllSidesSpacer(horizontalMinimumSpacing: horizontalMinimumSpacing, verticalMinimumSpacing: verticalMinimumSpacing))
     }
     
     /**
@@ -49,17 +77,5 @@ extension View {
         modifier(FillGradientOpacityAndShadow(colors: colors, opacity: opacity, shadowRadius: shadowRadius))
     }
     
-    /**
-     A container SwiftUI view where the content is aligned correctly both vertically and horizontally, using a minimum spacing/padding if needed. If not, 0 spacing would do the trick.
-     
-      - parameters:
-         - colors: the horizontal spacing that both .leading and .trailing are going to minumumly have.
-         - opacity: the vertical spacing that both .top and .bottom are going to minumumly have.
-         - shadowRadius: a radius for the shadow that is going to be applied to the view.
-     
-      - returns: A view with the ViewModifier applied, with minimumSpacing applied and centered at all edges. Default is horizontalMinimumSpacing = 0 and verticalMinimumSpacing = 0
-     */
-    func spaceAtAllSides(horizontalMinimumSpacing: CGFloat = 0, verticalMinimumSpacing: CGFloat = 0) -> some View {
-        modifier(AllSidesSpacer(horizontalMinimumSpacing: horizontalMinimumSpacing, verticalMinimumSpacing: verticalMinimumSpacing))
-    }
+
 }
