@@ -15,7 +15,7 @@
 - **100% Swift**.
 - **Three examples** are included in the package. All using SwiftUI, following **architectural patterns and leveraging SwiftUI's power**.
 - Fully **documented** and **tested**.
-- **Update**d from the latest games released.
+- **Updated** from the latest games released.
 - This will be very useful especially for **Terastal Pokémon** and **Tera Raid Battles** on the brand-new games.
 
 ## 🚀 Get Started
