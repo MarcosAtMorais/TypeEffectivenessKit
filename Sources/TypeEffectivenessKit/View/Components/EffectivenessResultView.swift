@@ -15,6 +15,10 @@ public struct EffectivenessResultView: View {
     /// This result is provided by the calculation made in the ViewModel.
     @Binding var result: Effectiveness
     
+    public init(result: Binding<Effectiveness>) {
+        self._result = result
+    }
+    
     public var body: some View {
         RoundedRectangle(cornerRadius: 12)
             .fill(LinearGradient(colors: [.gray.opacity(0.2), .gray.opacity(0.5), .gray], startPoint: .topLeading, endPoint: .bottomTrailing))

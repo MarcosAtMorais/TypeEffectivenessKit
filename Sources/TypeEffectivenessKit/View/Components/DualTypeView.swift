@@ -19,14 +19,19 @@ import SwiftUI
 public struct DualTypeView: View {
     
     /// The first type that will compose the view. This is the Primary Type.
-    @Binding public var firstType: PokemonType
+    @Binding var firstType: PokemonType
     
     /// The second type that will compose the view. This is the Secondary Type.
-    @Binding public var secondType: PokemonType
+    @Binding var secondType: PokemonType
     
     /// Checks if the types are different. If so, render the secondType.
     var differentTypes: Bool {
         firstType != secondType
+    }
+    
+    public init(firstType: Binding<PokemonType>, secondType: Binding<PokemonType>) {
+        self._firstType = firstType
+        self._secondType = secondType
     }
     
     public var body: some View {

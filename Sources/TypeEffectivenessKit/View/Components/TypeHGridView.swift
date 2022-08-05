@@ -24,6 +24,11 @@ public struct TypeHGridView: View {
         GridItem(.flexible()),
     ]
     
+    public init(selectedType: Binding<PokemonType>, typeViewModel: TypeViewModel) {
+        self._selectedType = selectedType
+        self._typeViewModel = StateObject(wrappedValue: typeViewModel)
+    }
+    
     public var body: some View {
         VStack {
             TypeHGridTitleView(title: $typeViewModel.title)
