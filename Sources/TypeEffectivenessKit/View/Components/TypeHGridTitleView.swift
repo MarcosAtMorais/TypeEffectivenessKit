@@ -15,10 +15,12 @@ public struct TypeHGridTitleView: View {
     /// A binding to the title that will compose the TitleView.
     @Binding var title: String
     
+    // MARK: - Initializer
     public init(title: Binding<String>) {
         self._title = title
     }
     
+    // MARK: - View
     public var body: some View {
         HStack {
             Text(title)

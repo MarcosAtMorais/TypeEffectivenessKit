@@ -10,8 +10,7 @@ import SwiftUI
 
 public enum PokemonType: Int, RawRepresentable, CaseIterable {
     
-    // MARK: - Properties
-
+    // MARK: - Cases
     case normal
     case fire
     case water
@@ -31,6 +30,7 @@ public enum PokemonType: Int, RawRepresentable, CaseIterable {
     case steel
     case fairy
     
+    // MARK: - Localized Title
     /// The Localized Title for each Pokemon Type.
     public var localizedTitle: String {
         switch self {
@@ -73,6 +73,7 @@ public enum PokemonType: Int, RawRepresentable, CaseIterable {
         }
     }
     
+    // MARK: - Weakness
     /// A TypeWeaknessable that maps all weaknesses given a case of this enum (PokemonType)
     public var weakness: TypeWeaknessable {
         
@@ -117,6 +118,7 @@ public enum PokemonType: Int, RawRepresentable, CaseIterable {
         
     }
     
+    // MARK: - Color Array associated with the Pokémon Type
     /// A gradient that represents the current case of this enum according to the PokemonType.
     public var colorGradient: [Color] {
         switch self {
@@ -159,6 +161,7 @@ public enum PokemonType: Int, RawRepresentable, CaseIterable {
         }
     }
     
+    // MARK: - Image
     /// An image that represents the current case of this enum according to the PokemonType.
     public var image: String {
         switch self {
@@ -201,6 +204,7 @@ public enum PokemonType: Int, RawRepresentable, CaseIterable {
         }
     }
     
+    // MARK: - Effectiveness Methods
     /**
      Checks the effectiveness of a Pokemon Move Type according to the current type (case of this enum) and the other type it has (secondaryType). If it's the same type (primary and secondary), it is treated as a single type.
      

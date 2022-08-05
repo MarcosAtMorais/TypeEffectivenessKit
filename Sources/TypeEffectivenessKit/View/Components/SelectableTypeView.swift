@@ -24,12 +24,14 @@ public struct SelectableTypeView: View {
         pokemonType == selectedType
     }
     
+    // MARK: - Initializer
     public init(pokemonType: PokemonType = .fire, selectedType: Binding<PokemonType>, onSelect: Binding<(PokemonType) -> ()>) {
         self.pokemonType = pokemonType
         self._selectedType = selectedType
         self._onSelect = onSelect
     }
     
+    // MARK: - View
     public var body: some View {
         Button {
             withAnimation {

@@ -15,10 +15,12 @@ public struct TypeView: View {
     /// A binding to the selectedType in the hierarchy (inside TypeEffectivenessViewModel).
     @Binding var pokemonType: PokemonType
     
+    // MARK: - Initializer
     public init(pokemonType: Binding<PokemonType>) {
         self._pokemonType = pokemonType
     }
     
+    // MARK: - View
     public var body: some View {
         RoundedRectangle(cornerRadius: 5)
             .fill(LinearGradient(colors: pokemonType.colorGradient, startPoint: .topLeading, endPoint: .bottomTrailing))

@@ -13,7 +13,6 @@ import SwiftUI
 public struct WeaknessDisplayExampleView: View {
     
     // MARK: - Properties
-    
     /// Type that you want to check the weaknesses
     @State var pokemonType: PokemonType = .ghost
     
@@ -23,7 +22,6 @@ public struct WeaknessDisplayExampleView: View {
     }
     
     // MARK: - View
-    
     public var body: some View {
         VStack {
             List {

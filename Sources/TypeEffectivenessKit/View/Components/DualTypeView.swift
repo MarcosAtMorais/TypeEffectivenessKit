@@ -29,11 +29,13 @@ public struct DualTypeView: View {
         firstType != secondType
     }
     
+    // MARK: - Initializer
     public init(firstType: Binding<PokemonType>, secondType: Binding<PokemonType>) {
         self._firstType = firstType
         self._secondType = secondType
     }
     
+    // MARK: - View
     public var body: some View {
         HStack {
             TypeView(pokemonType: $firstType)

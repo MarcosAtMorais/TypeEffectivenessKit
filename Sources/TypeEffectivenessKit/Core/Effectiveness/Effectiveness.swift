@@ -12,6 +12,7 @@ This effectiveness is the complete one, that also checks for DualType effectiven
  */
 public enum Effectiveness: Int, RawRepresentable, CaseIterable {
     
+    // MARK: - Cases
     case notLocated
     case noEffect
     case barelyEffective
@@ -20,6 +21,7 @@ public enum Effectiveness: Int, RawRepresentable, CaseIterable {
     case superEffective
     case ultraEffective
     
+    // MARK: - Localized Title
     /// The Localized Title for each Pokemon Effectiveness.
     public var localized: String {
         switch self {
