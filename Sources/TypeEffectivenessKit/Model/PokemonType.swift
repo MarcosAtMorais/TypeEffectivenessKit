@@ -121,41 +121,41 @@ public enum PokemonType: Int, RawRepresentable, CaseIterable {
     var colorGradient: [Color] {
         switch self {
         case .normal:
-            return [.gray.opacity(0.75), .gray]
+            return Color.normalType
         case .fire:
-            return [.red.opacity(0.5), .red]
+            return Color.fireType
         case .water:
-            return [.blue.opacity(0.5), .blue]
+            return Color.waterType
         case .electric:
-            return [.yellow.opacity(0.5), .yellow]
+            return Color.electricType
         case .grass:
-            return [.green.opacity(0.5), .green]
+            return Color.grassType
         case .ice:
-            return [.teal.opacity(0.5), .teal]
+            return Color.iceType
         case .fighting:
-            return [.brown.opacity(0.5), .brown]
+            return Color.fightingType
         case .poison:
-            return [.purple.opacity(0.85), .purple]
+            return Color.poisonType
         case .ground:
-            return [.orange.opacity(0.5), .yellow]
+            return Color.groundType
         case .flying:
-            return [.cyan.opacity(0.5), .cyan]
+            return Color.flyingType
         case .psychic:
-            return [.pink.opacity(0.5), .pink]
+            return Color.psychicType
         case .bug:
-            return [.green.opacity(0.25), .green.opacity(0.5)]
+            return Color.bugType
         case .rock:
-            return [.yellow.opacity(0.5), .yellow.opacity(0.75)]
+            return Color.rockType
         case .ghost:
-            return [.purple.opacity(0.85), .purple]
+            return Color.ghostType
         case .dragon:
-            return [.purple.opacity(0.5), .purple]
+            return Color.dragonType
         case .dark:
-            return [.brown.opacity(0.5), .brown]
+            return Color.darkType
         case .steel:
-            return [.gray.opacity(0.5), .gray]
+            return Color.steelType
         case .fairy:
-            return [.pink.opacity(0.25), .pink]
+            return Color.fairyType
         }
     }
     
