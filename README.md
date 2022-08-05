@@ -74,6 +74,8 @@ TypeEffectivenessKit also comes with several scenes that you can learn from for 
   <img width="300" height="564" src="https://www.marcostmorais.com/example-app-typeeffectivenesskit.png">
 </p>
 
+All examples are located on the View folder, but the elements should be able to be used just with the package import.
+
 ## 🔨 Swift Package Manager
 
 You can also add this library using Swift Package Manager.
