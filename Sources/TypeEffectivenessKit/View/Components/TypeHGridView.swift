@@ -10,7 +10,7 @@ import SwiftUI
 /**
  A horizontal grid view that places SelectableTypeViews as GridItems. All items are flexible.
  */
-struct TypeHGridView: View {
+public struct TypeHGridView: View {
     
     /// A binding to the currently selectedType on the hierarchy (can be firstType, secondType or moveType).
     @Binding var selectedType: PokemonType
@@ -24,7 +24,7 @@ struct TypeHGridView: View {
         GridItem(.flexible()),
     ]
     
-    var body: some View {
+    public var body: some View {
         VStack {
             TypeHGridTitleView(title: $typeViewModel.title)
             ScrollView(.horizontal) {

@@ -10,7 +10,7 @@ import SwiftUI
 /**
  A simpler example using just the Pokemon Types, DualType and Effectiveness
  */
-struct SimplerTypeEffectivenessView: View {
+public struct SimplerTypeEffectivenessView: View {
     
     // MARK: - Properties
 
@@ -28,7 +28,7 @@ struct SimplerTypeEffectivenessView: View {
     
     // MARK: - View
 
-    var body: some View {
+    public var body: some View {
         VStack {
             HStack {
                 Text("Pokémon Type")

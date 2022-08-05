@@ -10,12 +10,12 @@ import SwiftUI
 /**
  A view that houses the title for the TypeHGridView.
  */
-struct TypeHGridTitleView: View {
+public struct TypeHGridTitleView: View {
     
     /// A binding to the title that will compose the TitleView.
     @Binding var title: String
     
-    var body: some View {
+    public var body: some View {
         HStack {
             Text(title)
                 .stylizeCaption()

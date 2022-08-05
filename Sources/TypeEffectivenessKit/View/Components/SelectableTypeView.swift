@@ -10,7 +10,7 @@ import SwiftUI
 /**
  A Selectable SwiftUI view that provides information related to the PokemonType. This is Single-Typed and consists of a Button thet has a RoundedRectangle as a Label.
  */
-struct SelectableTypeView: View {
+public struct SelectableTypeView: View {
     
     /// The PokemonType of the view.
     @State var pokemonType: PokemonType = .fire
@@ -24,7 +24,7 @@ struct SelectableTypeView: View {
         pokemonType == selectedType
     }
     
-    var body: some View {
+    public var body: some View {
         Button {
             withAnimation {
                 self.selectedType = pokemonType

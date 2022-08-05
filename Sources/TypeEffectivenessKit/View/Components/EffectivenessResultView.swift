@@ -10,12 +10,12 @@ import SwiftUI
 /**
  The effectiveness result view. It houses an Effectiveness binding that *must* be provided to be rendered.
  */
-struct EffectivenessResultView: View {
+public struct EffectivenessResultView: View {
     
     /// This result is provided by the calculation made in the ViewModel.
     @Binding var result: Effectiveness
     
-    var body: some View {
+    public var body: some View {
         RoundedRectangle(cornerRadius: 12)
             .fill(LinearGradient(colors: [.gray.opacity(0.2), .gray.opacity(0.5), .gray], startPoint: .topLeading, endPoint: .bottomTrailing))
             .frame(maxWidth: .infinity, maxHeight: 50)

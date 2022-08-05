@@ -10,12 +10,12 @@ import SwiftUI
 /**
  A SwiftUI view that provides information related to the PokemonType. This is Single-Typed and consists of a RoundedRectangle.
  */
-struct TypeView: View {
+public struct TypeView: View {
     
     /// A binding to the selectedType in the hierarchy (inside TypeEffectivenessViewModel).
     @Binding var pokemonType: PokemonType
     
-    var body: some View {
+    public var body: some View {
         RoundedRectangle(cornerRadius: 5)
             .fill(LinearGradient(colors: pokemonType.colorGradient, startPoint: .topLeading, endPoint: .bottomTrailing))
             .overlay {

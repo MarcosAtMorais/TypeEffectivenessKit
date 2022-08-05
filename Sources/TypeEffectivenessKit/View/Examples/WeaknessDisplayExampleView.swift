@@ -10,7 +10,7 @@ import SwiftUI
 /**
  Simple example that shows how to fetch weaknesses from Pokémon Types.
  */
-struct WeaknessDisplayExampleView: View {
+public struct WeaknessDisplayExampleView: View {
     
     // MARK: - Properties
     
@@ -19,7 +19,7 @@ struct WeaknessDisplayExampleView: View {
     
     // MARK: - View
     
-    var body: some View {
+    public var body: some View {
         VStack {
             List {
                 ForEach(listAllHalfDamageWeaknessesFrom(pokemonType), id: \.self) { type in

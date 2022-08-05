@@ -16,7 +16,7 @@ import SwiftUI
  
  - returns: A container view with two TypeViews.
  */
-struct DualTypeView: View {
+public struct DualTypeView: View {
     
     /// The first type that will compose the view. This is the Primary Type.
     @Binding var firstType: PokemonType
@@ -29,7 +29,7 @@ struct DualTypeView: View {
         firstType != secondType
     }
     
-    var body: some View {
+    public var body: some View {
         HStack {
             TypeView(pokemonType: $firstType)
             if differentTypes {
