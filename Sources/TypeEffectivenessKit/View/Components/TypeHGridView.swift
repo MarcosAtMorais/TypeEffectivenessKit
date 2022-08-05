@@ -42,6 +42,7 @@ struct TypeHGridView: View {
             RoundedRectangle(cornerRadius: Common.roundedRectangleCornerRadius)
                 .fillGradientOpacityAndShadow(using: [.purple, .cyan])
         }
+        .padding([.trailing, .leading], 10)
     }
 }
 
