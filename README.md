@@ -1,4 +1,6 @@
-![TypeEffectivenessKit Banner](https://www.marcostmorais.com/type-effectiveness-kit.png)
+<p align="center">
+  <img width="800" height="386" src="https://www.marcostmorais.com/type-effectiveness-kit.png">
+</p>
 
 ![Swift Version](https://img.shields.io/badge/Swift-5.5-F16D39.svg?style=flat) ![Dependency frameworks](https://img.shields.io/badge/Supports-_Swift_Package_Manager-F16D39.svg?style=flat) [![Twitter](https://img.shields.io/badge/twitter-@marcostmorais-blue.svg?style=flat)](https://twitter.com/marcostmorais) ![Platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS%20%7C%20iPadOS-blue)
 
@@ -63,6 +65,14 @@ print(effectiveness.localized) // No Effect
 ```
 
 This package also includes several **SwiftUI views that display the types, color and symbols in a stylish way**. As well as **grids** and **stacks**. You can use these views as you please. Explore 'em all!
+
+## 📱 Example App for educational purposes
+
+TypeEffectivenessKit also comes with several scenes that you can learn from for how to use types. Such as this one and many others:
+
+<p align="center">
+  <img width="300" height="564" src="https://www.marcostmorais.com/example-app-typeeffectivenesskit.png">
+</p>
 
 ## 🔨 Swift Package Manager
 
